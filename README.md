@@ -1,6 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
+Next task: jun1_2
 
 ## Completed
 
@@ -62,6 +63,12 @@ Current level: Junior 1
   - nil pointers
   - multiple assignment
 
+- [x] jun1_1 Divide
+  - error
+  - errors.New
+  - multiple return values
+  - error handling
+
 ## Topics learned
 
 - rune vs byte
@@ -96,3 +103,6 @@ Current level: Junior 1
 - Dereference Operator (*)
 - Nil Pointers
 - Multiple Assignment
+- error interface
+- errors.New
+- explicit error handling
