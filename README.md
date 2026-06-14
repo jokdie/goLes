@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_6
+Next task: jun1_7
 
 ## Completed
 
@@ -92,6 +92,12 @@ Next task: jun1_6
   - pointer receiver
   - interface implementation
 
+- [x] jun1_6 Interfaces + Polymorphism (Shape)
+  - Interface implementation
+  - Method Set basics
+  - Polymorphism in Go
+  - Struct vs interface behavior
+
 ## Topics learned
 
 - rune vs byte
@@ -142,3 +148,6 @@ Next task: jun1_6
 - Method Set
 - Pointer Receiver
 - Interface Implementation Rules
+- Interfaces (polymorphism)
+- Interface method dispatch
+- Struct method implementation rules
