@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_5
+Next task: jun1_6
 
 ## Completed
 
@@ -87,6 +87,11 @@ Next task: jun1_5
   - pointer nil
   - interface comparison
 
+- [x] jun1_5 Pointer Receiver Interface
+  - method set
+  - pointer receiver
+  - interface implementation
+
 ## Topics learned
 
 - rune vs byte
@@ -134,3 +139,6 @@ Next task: jun1_5
 - Nil Interface
 - Interface Comparison
 - Interface Internal Representation
+- Method Set
+- Pointer Receiver
+- Interface Implementation Rules
