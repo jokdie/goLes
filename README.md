@@ -1,6 +1,6 @@
 # Go Learning Roadmap
 
-Current level: Junior 0
+Current level: Junior 1
 
 ## Completed
 
@@ -55,6 +55,13 @@ Current level: Junior 0
   - struct copy
   - pointer semantics
 
+- [x] jun0_10 Swap
+  - pointers
+  - dereference
+  - address operator
+  - nil pointers
+  - multiple assignment
+
 ## Topics learned
 
 - rune vs byte
@@ -84,3 +91,8 @@ Current level: Junior 0
 - Pointer Receiver
 - Struct Copy Semantics
 - Pointer Semantics
+- Pointers
+- Address Operator (&)
+- Dereference Operator (*)
+- Nil Pointers
+- Multiple Assignment
