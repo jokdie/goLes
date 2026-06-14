@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_4
+Next task: jun1_5
 
 ## Completed
 
@@ -81,6 +81,12 @@ Next task: jun1_4
   - implicit interface implementation
   - interface values
 
+- [x] jun1_4 Interface Nil Trap
+  - nil interface
+  - interface value
+  - pointer nil
+  - interface comparison
+
 ## Topics learned
 
 - rune vs byte
@@ -125,3 +131,6 @@ Next task: jun1_4
 - Interfaces
 - Polymorphism
 - Interface Values
+- Nil Interface
+- Interface Comparison
+- Interface Internal Representation
