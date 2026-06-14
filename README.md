@@ -47,6 +47,14 @@ Current level: Junior 0
   - reverse slice
   - string immutability
 
+- [x] jun0_9 Counter
+  - struct
+  - methods
+  - value receiver
+  - pointer receiver
+  - struct copy
+  - pointer semantics
+
 ## Topics learned
 
 - rune vs byte
@@ -70,3 +78,9 @@ Current level: Junior 0
 - string immutability
 - string vs []byte
 - string vs []rune
+- Structs
+- Methods
+- Value Receiver
+- Pointer Receiver
+- Struct Copy Semantics
+- Pointer Semantics
