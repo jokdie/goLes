@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_3
+Next task: jun1_4
 
 ## Completed
 
@@ -75,6 +75,12 @@ Next task: jun1_3
   - implicit interface implementation
   - method sets
 
+- [x] jun1_3 Interfaces and Polymorphism
+  - interfaces
+  - polymorphism
+  - implicit interface implementation
+  - interface values
+
 ## Topics learned
 
 - rune vs byte
@@ -116,3 +122,6 @@ Next task: jun1_3
 - Implicit Interface Implementation
 - Method Sets
 - Error Interface
+- Interfaces
+- Polymorphism
+- Interface Values
