@@ -35,6 +35,12 @@ Current level: Junior 0
   - indexing
   - edge cases
 
+- [x] jun0_7 RemoveAt
+  - removing elements from slice
+  - backing array
+  - slice copying
+  - off-by-one
+
 ## Topics learned
 
 - rune vs byte
@@ -49,3 +55,7 @@ Current level: Junior 0
 - len vs cap
 - map lookup
 - comma-ok idiom
+- removing elements from slice
+- backing array sharing
+- append side effects
+- off-by-one errors
