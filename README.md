@@ -41,6 +41,12 @@ Current level: Junior 0
   - slice copying
   - off-by-one
 
+- [x] jun0_8 ReverseWords
+  - strings.Fields
+  - strings.Join
+  - reverse slice
+  - string immutability
+
 ## Topics learned
 
 - rune vs byte
@@ -59,3 +65,8 @@ Current level: Junior 0
 - backing array sharing
 - append side effects
 - off-by-one errors
+- strings.Fields
+- strings.Join
+- string immutability
+- string vs []byte
+- string vs []rune
