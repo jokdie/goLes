@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_2
+Next task: jun1_3
 
 ## Completed
 
@@ -69,6 +69,12 @@ Next task: jun1_2
   - multiple return values
   - error handling
 
+- [x] jun1_2 Custom Validation Error
+  - custom errors
+  - error interface
+  - implicit interface implementation
+  - method sets
+
 ## Topics learned
 
 - rune vs byte
@@ -106,3 +112,7 @@ Next task: jun1_2
 - error interface
 - errors.New
 - explicit error handling
+- Custom Errors
+- Implicit Interface Implementation
+- Method Sets
+- Error Interface
