@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_10
+Next task: jun2_0
 
 ## Completed
 
@@ -117,6 +117,12 @@ Next task: jun1_10
   - composition vs embedding
   - shadowing
 
+- [x] jun1_10 Auditor Embedding
+  - embedding
+  - method promotion
+  - shadowing
+  - method resolution
+
 ## Topics learned
 
 - rune vs byte
@@ -183,3 +189,6 @@ Next task: jun1_10
 - Method Promotion
 - Shadowing
 - Composition vs Embedding
+- Method Resolution
+- Embedded Method Access
+- Shadowing vs Override
