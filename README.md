@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_1
+Next task: jun2_2
 
 ## Completed
 
@@ -123,6 +123,13 @@ Next task: jun2_1
   - shadowing
   - method resolution
 
+- [x] jun2_1 Packages and Visibility
+  - packages
+  - imports
+  - exported identifiers
+  - unexported identifiers
+  - constructors
+
 ## Topics learned
 
 - rune vs byte
@@ -192,3 +199,9 @@ Next task: jun2_1
 - Method Resolution
 - Embedded Method Access
 - Shadowing vs Override
+- Packages
+- Imports
+- Exported Identifiers
+- Unexported Identifiers
+- Package Visibility Rules
+- Constructors (New pattern)
