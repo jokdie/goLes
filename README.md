@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_7
+Next task: jun1_8
 
 ## Completed
 
@@ -98,6 +98,13 @@ Next task: jun1_7
   - Polymorphism in Go
   - Struct vs interface behavior
 
+  - [x] jun1_7 User Repository
+  - custom errors
+  - interfaces
+  - interface values
+  - repository pattern basics
+  - map lookup
+
 ## Topics learned
 
 - rune vs byte
@@ -151,3 +158,8 @@ Next task: jun1_7
 - Interfaces (polymorphism)
 - Interface method dispatch
 - Struct method implementation rules
+- Repository Pattern Basics
+- Custom Error Types
+- Error Interface Implementation
+- Interface Dynamic Type
+- Interface Dynamic Value
