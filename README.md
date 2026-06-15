@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_2
+Next task: jun2_3
 
 ## Completed
 
@@ -130,6 +130,12 @@ Next task: jun2_2
   - unexported identifiers
   - constructors
 
+- [x] jun2_2 Package API Design
+  - encapsulation
+  - exported methods
+  - unexported fields
+  - package api
+
 ## Topics learned
 
 - rune vs byte
@@ -205,3 +211,9 @@ Next task: jun2_2
 - Unexported Identifiers
 - Package Visibility Rules
 - Constructors (New pattern)
+- Encapsulation
+- Information Hiding
+- Package API Design
+- Exported Methods
+- Unexported Fields
+- Getter Pattern in Go
