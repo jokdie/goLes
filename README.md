@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 1
-Next task: jun2_0
+Current level: Junior 2
+Next task: jun2_1
 
 ## Completed
 
