@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_8
+Next task: jun1_9
 
 ## Completed
 
@@ -105,6 +105,12 @@ Next task: jun1_8
   - repository pattern basics
   - map lookup
 
+- [x] jun1_8 Notification Service
+  - composition
+  - dependency injection basics
+  - interfaces as dependencies
+  - custom errors
+
 ## Topics learned
 
 - rune vs byte
@@ -163,3 +169,7 @@ Next task: jun1_8
 - Error Interface Implementation
 - Interface Dynamic Type
 - Interface Dynamic Value
+- Composition
+- Dependency Injection Basics
+- Interfaces as Dependencies
+- Service Composition
