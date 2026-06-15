@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_3
+Next task: jun2_4
 
 ## Completed
 
@@ -136,6 +136,12 @@ Next task: jun2_3
   - unexported fields
   - package api
 
+- [x] jun2_3 Config Constructor Validation
+  - constructors
+  - validation
+  - package boundaries
+  - custom errors
+
 ## Topics learned
 
 - rune vs byte
@@ -217,3 +223,7 @@ Next task: jun2_3
 - Exported Methods
 - Unexported Fields
 - Getter Pattern in Go
+- Constructor Validation
+- Package Boundaries
+- Encapsulated Config Objects
+- Validation Errors
