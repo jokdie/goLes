@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 1
-Next task: jun1_9
+Next task: jun1_10
 
 ## Completed
 
@@ -111,6 +111,12 @@ Next task: jun1_9
   - interfaces as dependencies
   - custom errors
 
+- [x] jun1_9 Logger Embedding
+  - embedding
+  - method promotion
+  - composition vs embedding
+  - shadowing
+
 ## Topics learned
 
 - rune vs byte
@@ -173,3 +179,7 @@ Next task: jun1_9
 - Dependency Injection Basics
 - Interfaces as Dependencies
 - Service Composition
+- Embedding
+- Method Promotion
+- Shadowing
+- Composition vs Embedding
