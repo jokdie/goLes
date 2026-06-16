@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_8
+Next task: jun2_9
 
 ## Completed
 
@@ -166,6 +166,12 @@ Next task: jun2_8
   - validation errors
   - type assertions via errors.As
 
+  - [x] jun2_8 Error Polymorphism
+  - errors.As
+  - interface polymorphism
+  - custom error types
+  - error dispatching
+
 ## Topics learned
 
 - rune vs byte
@@ -269,3 +275,7 @@ Next task: jun2_8
 - Custom Error Types
 - Validation Errors
 - Error Type Extraction
+- Error Polymorphism
+- Error Type Dispatching
+- Multiple Error Types
+- errors.As Deep Dive
