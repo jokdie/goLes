@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_5
+Next task: jun2_6
 
 ## Completed
 
@@ -148,6 +148,12 @@ Next task: jun2_5
   - package imports
   - package organization
 
+- [x] jun2_5 Sentinel Errors
+  - errors.New
+  - sentinel errors
+  - package variables
+  - error comparison
+
 ## Topics learned
 
 - rune vs byte
@@ -238,3 +244,7 @@ Next task: jun2_5
 - Package Imports
 - Package Organization
 - Multi-Package Projects
+- Sentinel Errors
+- Package-Level Variables
+- Error Identity
+- Error Comparison
