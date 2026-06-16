@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_6
+Next task: jun2_7
 
 ## Completed
 
@@ -154,6 +154,12 @@ Next task: jun2_6
   - package variables
   - error comparison
 
+  - [x] jun2_6 Error Wrapping and errors.Is
+  - error wrapping
+  - fmt.Errorf
+  - %w
+  - errors.Is
+
 ## Topics learned
 
 - rune vs byte
@@ -248,3 +254,8 @@ Next task: jun2_6
 - Package-Level Variables
 - Error Identity
 - Error Comparison
+- Error Wrapping
+- errors.Is
+- Wrapped Errors
+- Error Chains
+- fmt.Errorf %w
