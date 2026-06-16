@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_4
+Next task: jun2_5
 
 ## Completed
 
@@ -142,6 +142,12 @@ Next task: jun2_4
   - package boundaries
   - custom errors
 
+- [x] jun2_4 Modules and Package Imports
+  - go.mod
+  - module path
+  - package imports
+  - package organization
+
 ## Topics learned
 
 - rune vs byte
@@ -227,3 +233,8 @@ Next task: jun2_4
 - Package Boundaries
 - Encapsulated Config Objects
 - Validation Errors
+- Go Modules
+- Module Path
+- Package Imports
+- Package Organization
+- Multi-Package Projects
