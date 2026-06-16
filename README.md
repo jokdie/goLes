@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 2
-Next task: jun2_7
+Next task: jun2_8
 
 ## Completed
 
@@ -160,6 +160,12 @@ Next task: jun2_7
   - %w
   - errors.Is
 
+  - [x] jun2_7 errors.As and Custom Errors
+  - errors.As
+  - custom error types
+  - validation errors
+  - type assertions via errors.As
+
 ## Topics learned
 
 - rune vs byte
@@ -259,3 +265,7 @@ Next task: jun2_7
 - Wrapped Errors
 - Error Chains
 - fmt.Errorf %w
+- errors.As
+- Custom Error Types
+- Validation Errors
+- Error Type Extraction
