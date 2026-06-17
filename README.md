@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_3
+Next task: jun3_4
 
 ## Completed
 
@@ -190,6 +190,12 @@ Next task: jun3_3
   - json.Unmarshal
   - struct tags
 
+  - [x] jun3_3 JSON Response Design
+  - nested JSON
+  - API responses
+  - response DTO
+  - json tags
+
 ## Topics learned
 
 - rune vs byte
@@ -312,3 +318,9 @@ Next task: jun3_3
 - json.Unmarshal
 - Struct Tags
 - Reflection Basics
+- DTO
+- Response Model
+- API Contract
+- json.NewEncoder
+- json:"-"
+- API Response Design
