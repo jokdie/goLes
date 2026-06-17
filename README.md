@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_2
+Next task: jun3_3
 
 ## Completed
 
@@ -184,6 +184,12 @@ Next task: jun3_2
   - method promotion
   - shadowing
 
+  - [x] jun3_2 JSON Basics
+  - encoding/json
+  - json.Marshal
+  - json.Unmarshal
+  - struct tags
+
 ## Topics learned
 
 - rune vs byte
@@ -300,3 +306,9 @@ Next task: jun3_2
 - Method Promotion
 - Shadowing
 - Composition vs Embedding
+- JSON
+- encoding/json
+- json.Marshal
+- json.Unmarshal
+- Struct Tags
+- Reflection Basics
