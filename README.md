@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_4
+Next task: jun3_5
 
 ## Completed
 
@@ -196,6 +196,13 @@ Next task: jun3_4
   - response DTO
   - json tags
 
+  - [x] jun3_4 First HTTP Server
+  - net/http
+  - http.HandlerFunc
+  - ResponseWriter
+  - Request
+  - HTTP methods
+
 ## Topics learned
 
 - rune vs byte
@@ -324,3 +331,11 @@ Next task: jun3_4
 - json.NewEncoder
 - json:"-"
 - API Response Design
+- net/http
+- http.Handler
+- http.HandlerFunc
+- http.ResponseWriter
+- http.Request
+- HTTP Methods
+- ListenAndServe
+- HTTP Status Codes
