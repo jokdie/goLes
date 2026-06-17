@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_1
+Next task: jun3_2
 
 ## Completed
 
@@ -178,6 +178,12 @@ Next task: jun3_1
   - constructor injection
   - interface dependencies
 
+  - [x] jun3_1 Composition vs Embedding
+  - composition
+  - embedding
+  - method promotion
+  - shadowing
+
 ## Topics learned
 
 - rune vs byte
@@ -289,3 +295,8 @@ Next task: jun3_1
 - Constructor Injection
 - Service Layer Basics
 - Dependency Inversion Basics
+- Composition
+- Embedding
+- Method Promotion
+- Shadowing
+- Composition vs Embedding
