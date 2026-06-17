@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 2
-Next task: jun2_9
+Current level: Junior 3
+Next task: jun3_1
 
 ## Completed
 
@@ -172,6 +172,12 @@ Next task: jun2_9
   - custom error types
   - error dispatching
 
+  - [x] jun2_9 Dependency Injection Basics
+  - dependency injection
+  - service layer basics
+  - constructor injection
+  - interface dependencies
+
 ## Topics learned
 
 - rune vs byte
@@ -279,3 +285,7 @@ Next task: jun2_9
 - Error Type Dispatching
 - Multiple Error Types
 - errors.As Deep Dive
+- Dependency Injection
+- Constructor Injection
+- Service Layer Basics
+- Dependency Inversion Basics
