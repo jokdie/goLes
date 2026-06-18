@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_7
+Next task: jun3_8
 
 ## Completed
 
@@ -218,6 +218,13 @@ Next task: jun3_7
   - HTTP status codes
   - Bad Request handling
 
+  - [x] jun3_7 User Validation API
+  - HTTP POST
+  - JSON Decoder
+  - Validation Layer
+  - Error Response
+  - HTTP Status Codes
+
 ## Topics learned
 
 - rune vs byte
@@ -366,3 +373,9 @@ Next task: jun3_7
 - HTTP POST
 - HTTP request lifecycle
 - Request Body can be read only once
+- HTTP POST
+- JSON Decoder
+- Validation Layer
+- HTTP Status Codes
+- Error Response Pattern
+- Separation of Concerns
