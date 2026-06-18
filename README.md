@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_6
+Next task: jun3_7
 
 ## Completed
 
@@ -210,6 +210,14 @@ Next task: jun3_6
   - ServeMux
   - JSON API basics
 
+  - [x] jun3_6 POST JSON Endpoint
+  - POST method
+  - Request Body
+  - json.NewDecoder
+  - json.NewEncoder
+  - HTTP status codes
+  - Bad Request handling
+
 ## Topics learned
 
 - rune vs byte
@@ -352,3 +360,9 @@ Next task: jun3_6
 - ServeMux
 - JSON API
 - Header.Set vs Header.Add
+- Request Body
+- io.ReadCloser
+- json.NewDecoder
+- HTTP POST
+- HTTP request lifecycle
+- Request Body can be read only once
