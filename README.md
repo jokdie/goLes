@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_5
+Next task: jun3_6
 
 ## Completed
 
@@ -203,6 +203,13 @@ Next task: jun3_5
   - Request
   - HTTP methods
 
+  - [x] jun3_5 HTTP JSON Endpoint
+  - json.NewEncoder
+  - Content-Type
+  - HTTP Response
+  - ServeMux
+  - JSON API basics
+
 ## Topics learned
 
 - rune vs byte
@@ -339,3 +346,9 @@ Next task: jun3_5
 - HTTP Methods
 - ListenAndServe
 - HTTP Status Codes
+- json.NewEncoder
+- HTTP JSON Response
+- Content-Type
+- ServeMux
+- JSON API
+- Header.Set vs Header.Add
