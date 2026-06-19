@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_8
+Next task: jun3_9
 
 ## Completed
 
@@ -225,6 +225,12 @@ Next task: jun3_8
   - Error Response
   - HTTP Status Codes
 
+  - [x] jun3_8 Query Parameters API
+  - Query Parameters
+  - URL Values
+  - GET Endpoint
+  - JSON Response Helper
+
 ## Topics learned
 
 - rune vs byte
@@ -379,3 +385,9 @@ Next task: jun3_8
 - HTTP Status Codes
 - Error Response Pattern
 - Separation of Concerns
+- Query Parameters
+- URL Query
+- url.Values
+- Query().Get()
+- RawQuery
+- JSON Response Helper
