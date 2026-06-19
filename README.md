@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 3
-Next task: jun3_9
+Next task: jun3_10
 
 ## Completed
 
@@ -231,6 +231,17 @@ Next task: jun3_9
   - GET Endpoint
   - JSON Response Helper
 
+  - [x] jun3_9 Path Parameters API
+    - Path Parameters
+    - Request Routing
+    - strconv.Atoi
+    - URL Parameter Validation
+    - Service Layer
+    - Repository Layer
+    - Dependency Injection
+    - HTTP 400 vs 404 vs 500
+    - ServeMux Route Patterns
+
 ## Topics learned
 
 - rune vs byte
@@ -391,3 +402,17 @@ Next task: jun3_9
 - Query().Get()
 - RawQuery
 - JSON Response Helper
+- Path Parameters
+- Request Path Variables
+- r.PathValue()
+- strconv.Atoi
+- URL Parameter Validation
+- Route Parameters
+- ServeMux Pattern Routing
+- Layered Architecture Basics
+- Handler -> Service -> Repository
+- Dependency Injection Through Layers
+- HTTP 400 Bad Request
+- HTTP 404 Not Found
+- HTTP 500 Internal Server Error
+- Error Mapping
