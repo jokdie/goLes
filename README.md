@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 3
-Next task: jun3_10
+Current level: Junior 4
+Next task: jun4_1
 
 ## Completed
 
@@ -242,6 +242,16 @@ Next task: jun3_10
     - HTTP 400 vs 404 vs 500
     - ServeMux Route Patterns
 
+    - [x] jun3_10 User Create API
+  - HTTP POST
+  - DTO
+  - Validation
+  - Layered Architecture
+  - Dependency Injection
+  - In-Memory Repository
+  - HTTP 201 Created
+  - Error Response Pattern
+
 ## Topics learned
 
 - rune vs byte
@@ -416,3 +426,10 @@ Next task: jun3_10
 - HTTP 404 Not Found
 - HTTP 500 Internal Server Error
 - Error Mapping
+- DTO
+- Request DTO
+- Create Endpoint
+- In-Memory Repository
+- HTTP 201 Created
+- Service Layer Validation Flow
+- Entity Creation Flow
