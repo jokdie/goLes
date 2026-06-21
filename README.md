@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_1
+Next task: jun4_2
 
 ## Completed
 
@@ -154,63 +154,63 @@ Next task: jun4_1
   - package variables
   - error comparison
 
-  - [x] jun2_6 Error Wrapping and errors.Is
+- [x] jun2_6 Error Wrapping and errors.Is
   - error wrapping
   - fmt.Errorf
   - %w
   - errors.Is
 
-  - [x] jun2_7 errors.As and Custom Errors
+- [x] jun2_7 errors.As and Custom Errors
   - errors.As
   - custom error types
   - validation errors
   - type assertions via errors.As
 
-  - [x] jun2_8 Error Polymorphism
+- [x] jun2_8 Error Polymorphism
   - errors.As
   - interface polymorphism
   - custom error types
   - error dispatching
 
-  - [x] jun2_9 Dependency Injection Basics
+- [x] jun2_9 Dependency Injection Basics
   - dependency injection
   - service layer basics
   - constructor injection
   - interface dependencies
 
-  - [x] jun3_1 Composition vs Embedding
+- [x] jun3_1 Composition vs Embedding
   - composition
   - embedding
   - method promotion
   - shadowing
 
-  - [x] jun3_2 JSON Basics
+- [x] jun3_2 JSON Basics
   - encoding/json
   - json.Marshal
   - json.Unmarshal
   - struct tags
 
-  - [x] jun3_3 JSON Response Design
+- [x] jun3_3 JSON Response Design
   - nested JSON
   - API responses
   - response DTO
   - json tags
 
-  - [x] jun3_4 First HTTP Server
+- [x] jun3_4 First HTTP Server
   - net/http
   - http.HandlerFunc
   - ResponseWriter
   - Request
   - HTTP methods
 
-  - [x] jun3_5 HTTP JSON Endpoint
+- [x] jun3_5 HTTP JSON Endpoint
   - json.NewEncoder
   - Content-Type
   - HTTP Response
   - ServeMux
   - JSON API basics
 
-  - [x] jun3_6 POST JSON Endpoint
+- [x] jun3_6 POST JSON Endpoint
   - POST method
   - Request Body
   - json.NewDecoder
@@ -218,48 +218,56 @@ Next task: jun4_1
   - HTTP status codes
   - Bad Request handling
 
-  - [x] jun3_7 User Validation API
+- [x] jun3_7 User Validation API
   - HTTP POST
   - JSON Decoder
   - Validation Layer
   - Error Response
   - HTTP Status Codes
 
-  - [x] jun3_8 Query Parameters API
+- [x] jun3_8 Query Parameters API
   - Query Parameters
   - URL Values
   - GET Endpoint
   - JSON Response Helper
 
-  - [x] jun3_9 Path Parameters API
-    - Path Parameters
-    - Request Routing
-    - strconv.Atoi
-    - URL Parameter Validation
-    - Service Layer
-    - Repository Layer
-    - Dependency Injection
-    - HTTP 400 vs 404 vs 500
-    - ServeMux Route Patterns
+- [x] jun3_9 Path Parameters API
+  - Path Parameters
+  - Request Routing
+  - strconv.Atoi
+  - URL Parameter Validation
+  - Service Layer
+  - Repository Layer
+  - Dependency Injection
+  - HTTP 400 vs 404 vs 500
+  - ServeMux Route Patterns
 
-  - [x] jun3_10 User Create API
-    - HTTP POST
-    - DTO
-    - Validation
-    - Layered Architecture
-    - Dependency Injection
-    - In-Memory Repository
-    - HTTP 201 Created
-    - Error Response Pattern
+- [x] jun3_10 User Create API
+  - HTTP POST
+  - DTO
+  - Validation
+  - Layered Architecture
+  - Dependency Injection
+  - In-Memory Repository
+  - HTTP 201 Created
+  - Error Response Pattern
 
-  - [x] jun3_10 HTTP Middleware Basics
-    - Middleware
-    - Middleware Chain
-    - Request ID
-    - Logging Middleware
-    - ResponseWriter Wrapping
-    - Request Lifecycle
-    - Cross-Cutting Concerns
+- [x] jun3_10 HTTP Middleware Basics
+  - Middleware
+  - Middleware Chain
+  - Request ID
+  - Logging Middleware
+  - ResponseWriter Wrapping
+  - Request Lifecycle
+  - Cross-Cutting Concerns
+
+- [x] jun4_1 Context Basics
+  - context.Context
+  - context.WithValue
+  - Request Context
+  - Context propagation
+  - Request ID
+  - Custom Context Key
 
 ## Topics learned
 
@@ -452,3 +460,10 @@ Next task: jun4_1
 - HTTP Request Lifecycle
 - WriteHeader Semantics
 - Automatic Status Code 200
+- context.Context
+- Request Context
+- context.WithValue
+- Context Propagation
+- Context Values
+- Custom Context Keys
+- Request ID Pattern
