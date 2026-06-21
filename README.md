@@ -242,15 +242,24 @@ Next task: jun4_1
     - HTTP 400 vs 404 vs 500
     - ServeMux Route Patterns
 
-    - [x] jun3_10 User Create API
-  - HTTP POST
-  - DTO
-  - Validation
-  - Layered Architecture
-  - Dependency Injection
-  - In-Memory Repository
-  - HTTP 201 Created
-  - Error Response Pattern
+  - [x] jun3_10 User Create API
+    - HTTP POST
+    - DTO
+    - Validation
+    - Layered Architecture
+    - Dependency Injection
+    - In-Memory Repository
+    - HTTP 201 Created
+    - Error Response Pattern
+
+  - [x] jun3_10 HTTP Middleware Basics
+    - Middleware
+    - Middleware Chain
+    - Request ID
+    - Logging Middleware
+    - ResponseWriter Wrapping
+    - Request Lifecycle
+    - Cross-Cutting Concerns
 
 ## Topics learned
 
@@ -433,3 +442,13 @@ Next task: jun4_1
 - HTTP 201 Created
 - Service Layer Validation Flow
 - Entity Creation Flow
+- Middleware
+- Middleware Chaining
+- Cross-Cutting Concerns
+- Request ID Pattern
+- Logging Middleware
+- ResponseWriter Wrapping
+- Decorator Pattern
+- HTTP Request Lifecycle
+- WriteHeader Semantics
+- Automatic Status Code 200
