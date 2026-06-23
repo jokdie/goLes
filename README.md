@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_3
+Next task: jun4_4
 
 ## Completed
 
@@ -276,6 +276,13 @@ Next task: jun4_3
   - Context propagation
   - Select with Context
 
+- [x] jun4_3 Context Timeout
+  - context.WithTimeout
+  - context.DeadlineExceeded
+  - defer cancel
+  - timeout propagation
+  - HTTP timeout handling
+
 ## Topics learned
 
 - rune vs byte
@@ -480,3 +487,9 @@ Next task: jun4_3
 - Context-aware operations
 - Select with Context
 - HTTP Client Disconnect Handling
+- context.WithTimeout
+- context.DeadlineExceeded
+- Timeout Context
+- Context Timer Lifecycle
+- defer cancel Pattern
+- HTTP Request Timeout Handling
