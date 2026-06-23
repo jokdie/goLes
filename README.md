@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_2
+Next task: jun4_3
 
 ## Completed
 
@@ -98,7 +98,7 @@ Next task: jun4_2
   - Polymorphism in Go
   - Struct vs interface behavior
 
-  - [x] jun1_7 User Repository
+- [x] jun1_7 User Repository
   - custom errors
   - interfaces
   - interface values
@@ -268,6 +268,13 @@ Next task: jun4_2
   - Context propagation
   - Request ID
   - Custom Context Key
+
+- [x] jun4_2 Context Cancellation
+  - ctx.Done()
+  - context.Canceled
+  - HTTP request cancellation
+  - Context propagation
+  - Select with Context
 
 ## Topics learned
 
@@ -467,3 +474,9 @@ Next task: jun4_2
 - Context Values
 - Custom Context Keys
 - Request ID Pattern
+- Context Cancellation
+- ctx.Done()
+- context.Canceled
+- Context-aware operations
+- Select with Context
+- HTTP Client Disconnect Handling
