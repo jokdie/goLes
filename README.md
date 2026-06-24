@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 4
-Next task: jun4_7
+Current level: Junior 5
+Next task: jun5_1
 
 ## Completed
 
@@ -306,6 +306,15 @@ Next task: jun4_7
   - cancellation propagation
   - handler -> service -> repository cancellation flow
 
+- [x] jun4_7 Deadline vs Cancellation
+  - context.WithCancel
+  - context.WithTimeout
+  - context.Canceled
+  - context.DeadlineExceeded
+  - timeout propagation
+  - cancellation propagation
+  - ctx.Err()
+
 ## Topics learned
 
 - rune vs byte
@@ -533,3 +542,8 @@ Next task: jun4_7
 - context.Canceled
 - Select With Context
 - Cooperative Cancellation
+- Deadline vs Cancellation
+- context.DeadlineExceeded
+- Context timeout handling
+- Context error differentiation
+- Timeout propagation
