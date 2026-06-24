@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_5
+Next task: jun4_6
 
 ## Completed
 
@@ -290,6 +290,14 @@ Next task: jun4_5
   - request-scoped data
   - middleware context propagation
 
+- [x] jun4_5 Context Propagation
+  - context propagation
+  - layered architecture
+  - request-scoped data
+  - middleware context injection
+  - handler -> service -> repository
+  - context value extraction
+
 ## Topics learned
 
 - rune vs byte
@@ -507,3 +515,8 @@ Next task: jun4_5
 - Request-Scoped Data
 - Context Helper Pattern
 - Safe Type Assertions
+- Context Propagation
+- Context Through Layers
+- Middleware Context Injection
+- Request Scoped Data Flow
+- Handler → Service → Repository Context Chain
