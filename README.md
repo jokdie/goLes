@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_2
+Next task: jun5_3
 
 ## Completed
 
@@ -325,6 +325,14 @@ Next task: jun5_2
   - goroutine lifecycle
   - synchronization basics
 
+- [x] jun5_2 Multiple Goroutines
+  - multiple goroutines
+  - sync.WaitGroup
+  - WaitGroup.Go
+  - concurrent execution
+  - goroutine group synchronization
+  - WaitGroup lifecycle
+
 ## Topics learned
 
 - rune vs byte
@@ -565,3 +573,9 @@ Next task: jun5_2
 - Goroutine lifecycle
 - Main goroutine vs worker goroutine
 - Deterministic completion
+- Multiple Goroutines
+- Concurrent Execution
+- WaitGroup Group Synchronization
+- WaitGroup.Go
+- WaitGroup Lifecycle
+- Concurrent Task Coordination
