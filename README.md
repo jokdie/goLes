@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_4
+Next task: jun4_5
 
 ## Completed
 
@@ -283,6 +283,13 @@ Next task: jun4_4
   - timeout propagation
   - HTTP timeout handling
 
+- [x] jun4_4 Context Values
+  - context.WithValue
+  - Context keys
+  - custom context key type
+  - request-scoped data
+  - middleware context propagation
+
 ## Topics learned
 
 - rune vs byte
@@ -493,3 +500,10 @@ Next task: jun4_4
 - Context Timer Lifecycle
 - defer cancel Pattern
 - HTTP Request Timeout Handling
+- context.WithValue
+- Context Value Propagation
+- Context Key Types
+- Custom Context Keys
+- Request-Scoped Data
+- Context Helper Pattern
+- Safe Type Assertions
