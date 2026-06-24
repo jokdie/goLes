@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 4
-Next task: jun4_6
+Next task: jun4_7
 
 ## Completed
 
@@ -298,6 +298,14 @@ Next task: jun4_6
   - handler -> service -> repository
   - context value extraction
 
+- [x] jun4_6 Context Cancellation Propagation
+  - context cancellation
+  - ctx.Done()
+  - context.Canceled
+  - select with context
+  - cancellation propagation
+  - handler -> service -> repository cancellation flow
+
 ## Topics learned
 
 - rune vs byte
@@ -520,3 +528,8 @@ Next task: jun4_6
 - Middleware Context Injection
 - Request Scoped Data Flow
 - Handler → Service → Repository Context Chain
+- Context Cancellation Propagation
+- Context Error Handling
+- context.Canceled
+- Select With Context
+- Cooperative Cancellation
