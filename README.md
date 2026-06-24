@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_1
+Next task: jun5_2
 
 ## Completed
 
@@ -315,6 +315,16 @@ Next task: jun5_1
   - cancellation propagation
   - ctx.Err()
 
+- [x] jun5_1 First Goroutine
+  - goroutine
+  - go keyword
+  - sync.WaitGroup
+  - wg.Add
+  - wg.Done
+  - wg.Wait
+  - goroutine lifecycle
+  - synchronization basics
+
 ## Topics learned
 
 - rune vs byte
@@ -547,3 +557,11 @@ Next task: jun5_1
 - Context timeout handling
 - Context error differentiation
 - Timeout propagation
+- Goroutine
+- go keyword
+- Concurrent execution
+- sync.WaitGroup
+- Goroutine synchronization
+- Goroutine lifecycle
+- Main goroutine vs worker goroutine
+- Deterministic completion
