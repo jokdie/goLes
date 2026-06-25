@@ -341,6 +341,14 @@ Next task: jun5_4
   - WaitGroup synchronization
   - range variable semantics (Go 1.22+)
 
+- [x] jun5_4 Race Condition Demo
+  - race condition
+  - shared memory
+  - concurrent writes
+  - counter++
+  - WaitGroup vs synchronization
+  - data races
+
 ## Topics learned
 
 - rune vs byte
@@ -593,3 +601,9 @@ Next task: jun5_4
 - Goroutines Inside Loops
 - Range Variable Semantics
 - Closure Safety in Modern Go
+- Race Condition
+- Shared Memory
+- Concurrent Writes
+- Data Race
+- Lost Update Problem
+- WaitGroup vs Memory Safety
