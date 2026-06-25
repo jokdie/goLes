@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_3
+Next task: jun5_4
 
 ## Completed
 
@@ -333,6 +333,14 @@ Next task: jun5_3
   - goroutine group synchronization
   - WaitGroup lifecycle
 
+- [x] jun5_3 Closure Capture
+  - anonymous goroutines
+  - closure
+  - variable capture
+  - goroutines in loops
+  - WaitGroup synchronization
+  - range variable semantics (Go 1.22+)
+
 ## Topics learned
 
 - rune vs byte
@@ -579,3 +587,9 @@ Next task: jun5_3
 - WaitGroup.Go
 - WaitGroup Lifecycle
 - Concurrent Task Coordination
+- Closure
+- Variable Capture
+- Anonymous Goroutines
+- Goroutines Inside Loops
+- Range Variable Semantics
+- Closure Safety in Modern Go
