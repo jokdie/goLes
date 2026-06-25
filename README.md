@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_4
+Next task: jun5_6
 
 ## Completed
 
@@ -349,6 +349,14 @@ Next task: jun5_4
   - WaitGroup vs synchronization
   - data races
 
+- [x] jun5_5 Race Detector
+  - go run -race
+  - CGO
+  - data race detection
+  - race reports
+  - read/write conflicts
+  - concurrent memory access
+
 ## Topics learned
 
 - rune vs byte
@@ -607,3 +615,9 @@ Next task: jun5_4
 - Data Race
 - Lost Update Problem
 - WaitGroup vs Memory Safety
+- Race Detector
+- go run -race
+- CGO requirement
+- Read/Write Race
+- Memory Access Tracking
+- Race Report Analysis
