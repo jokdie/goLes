@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_6
+Next task: jun5_8
 
 ## Completed
 
@@ -364,6 +364,13 @@ Next task: jun5_6
   - thread-safe counter
   - race condition prevention
 
+- [x] jun5_7 RWMutex UserStore
+  - sync.RWMutex
+  - RLock / RUnlock
+  - Lock / Unlock
+  - concurrent map protection
+  - reader/writer synchronization
+
 ## Topics learned
 
 - rune vs byte
@@ -638,3 +645,10 @@ Next task: jun5_6
 - Mutex Zero Value
 - Exclusive Access
 - Race Condition Prevention with Mutex
+- sync.RWMutex
+- Reader Lock
+- Writer Lock
+- Multiple Readers
+- Exclusive Writer
+- Thread-safe Repository
+- Concurrent Map Protection
