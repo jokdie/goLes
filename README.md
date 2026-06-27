@@ -357,6 +357,13 @@ Next task: jun5_6
   - read/write conflicts
   - concurrent memory access
 
+- [x] jun5_6 Mutex Counter
+  - sync.Mutex
+  - mutual exclusion
+  - critical section
+  - thread-safe counter
+  - race condition prevention
+
 ## Topics learned
 
 - rune vs byte
@@ -621,3 +628,13 @@ Next task: jun5_6
 - Read/Write Race
 - Memory Access Tracking
 - Race Report Analysis
+- sync.Mutex
+- Mutual Exclusion
+- Critical Section
+- Thread-Safe Data
+- Thread-Safe Counter
+- Shared Memory Synchronization
+- Lock / Unlock Pattern
+- Mutex Zero Value
+- Exclusive Access
+- Race Condition Prevention with Mutex

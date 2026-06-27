@@ -15,7 +15,7 @@ func main() {
 	for i := 0; i < countGo; i++ {
 		go func() {
 			defer wg.Done()
-			counter++ // race condition demo
+			counter++ // race condition demo "go run -race main.go"
 		}()
 	}
 	wg.Wait()
