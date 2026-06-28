@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_4
+Next task: jun6_5
 
 ## Completed
 
@@ -416,6 +416,13 @@ Next task: jun6_4
   - channel ownership
   - producer closes channel
 
+- [x] jun6_4 Select Basics
+  - select
+  - waiting on multiple channels
+  - scheduler interaction
+  - non-deterministic channel selection
+  - single receive with select
+
 ## Topics learned
 
 - rune vs byte
@@ -733,3 +740,7 @@ Next task: jun6_4
 - Владение каналом (Channel Ownership)
 - range по каналу
 - Завершение чтения после close
+- select
+- Ожидание нескольких каналов
+- Недетерминированный выбор готового case
+- Взаимодействие select с планировщиком Go Runtime
