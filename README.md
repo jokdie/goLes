@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_8
+Next task: jun5_9
 
 ## Completed
 
@@ -371,6 +371,13 @@ Next task: jun5_8
   - concurrent map protection
   - reader/writer synchronization
 
+- [x] jun5_8 Mutex vs RWMutex Counter
+  - sync.Mutex
+  - sync.RWMutex
+  - interface implementation
+  - reader/writer locking
+  - interchangeable implementations
+
 ## Topics learned
 
 - rune vs byte
@@ -652,3 +659,8 @@ Next task: jun5_8
 - Exclusive Writer
 - Thread-safe Repository
 - Concurrent Map Protection
+- Mutex vs RWMutex
+- Interface-based design
+- Interchangeable implementations
+- Read-heavy vs Write-heavy workloads
+- Choosing synchronization primitives
