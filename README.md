@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_1
+Next task: jun6_2
 
 ## Completed
 
@@ -393,6 +393,14 @@ Next task: jun6_1
   - condition variables
   - waiting for state changes
 
+- [x] jun6_1 First Channel
+  - unbuffered channel
+  - chan
+  - send operation
+  - receive operation
+  - goroutine synchronization
+  - blocking semantics
+
 ## Topics learned
 
 - rune vs byte
@@ -694,3 +702,8 @@ Next task: jun6_1
 - Wait() releases and re-acquires the mutex
 - Проверка условия в цикле (for, а не if)
 - Отличие "состояния" от "события"
+- Unbuffered Channels
+- Channel Send (<-)
+- Channel Receive (<-)
+- Blocking Semantics
+- Goroutine Synchronization Through Channels
