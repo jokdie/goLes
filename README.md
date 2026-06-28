@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 5
-Next task: jun5_10
+Current level: Junior 6
+Next task: jun6_1
 
 ## Completed
 
@@ -385,6 +385,14 @@ Next task: jun5_10
   - encapsulation
   - loader pattern
 
+- [x] jun5_10 Condition Variable Basics
+  - sync.Cond
+  - sync.NewCond
+  - Wait
+  - Signal
+  - condition variables
+  - waiting for state changes
+
 ## Topics learned
 
 - rune vs byte
@@ -677,3 +685,12 @@ Next task: jun5_10
 - Loader Pattern
 - Encapsulation of synchronization primitives
 - Singleton initialization (без использования глобального состояния)
+- sync.Cond
+- sync.NewCond
+- Wait()
+- Signal()
+- Condition Variable
+- Waiting for State Changes
+- Wait() releases and re-acquires the mutex
+- Проверка условия в цикле (for, а не if)
+- Отличие "состояния" от "события"
