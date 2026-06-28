@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 5
-Next task: jun5_9
+Next task: jun5_10
 
 ## Completed
 
@@ -378,6 +378,13 @@ Next task: jun5_9
   - reader/writer locking
   - interchangeable implementations
 
+- [x] jun5_9 Config Loader
+  - sync.Once
+  - lazy initialization
+  - thread-safe singleton initialization
+  - encapsulation
+  - loader pattern
+
 ## Topics learned
 
 - rune vs byte
@@ -664,3 +671,9 @@ Next task: jun5_9
 - Interchangeable implementations
 - Read-heavy vs Write-heavy workloads
 - Choosing synchronization primitives
+- sync.Once
+- Lazy Initialization
+- One-Time Initialization
+- Loader Pattern
+- Encapsulation of synchronization primitives
+- Singleton initialization (без использования глобального состояния)
