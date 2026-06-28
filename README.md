@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_2
+Next task: jun6_3
 
 ## Completed
 
@@ -401,6 +401,13 @@ Next task: jun6_2
   - goroutine synchronization
   - blocking semantics
 
+- [x] jun6_2 Buffered Channels
+  - buffered channel
+  - channel capacity
+  - send without immediate receiver
+  - blocking on full buffer
+  - producer-consumer basics
+
 ## Topics learned
 
 - rune vs byte
@@ -707,3 +714,8 @@ Next task: jun6_2
 - Channel Receive (<-)
 - Blocking Semantics
 - Goroutine Synchronization Through Channels
+- Buffered Channels
+- Channel Capacity
+- Buffered Send Semantics
+- Producer / Consumer Basics
+- Buffer Full Blocking
