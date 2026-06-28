@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_5
+Next task: jun6_6
 
 ## Completed
 
@@ -423,6 +423,13 @@ Next task: jun6_5
   - non-deterministic channel selection
   - single receive with select
 
+- [x] jun6_5 Goroutine Leak
+  - goroutine leak
+  - select with send operation
+  - context cancellation
+  - avoiding blocked goroutines
+  - worker lifecycle
+
 ## Topics learned
 
 - rune vs byte
@@ -744,3 +751,8 @@ Next task: jun6_5
 - Ожидание нескольких каналов
 - Недетерминированный выбор готового case
 - Взаимодействие select с планировщиком Go Runtime
+- Goroutine leak
+- Отправка в select
+- Использование context.Context для завершения goroutine
+- Жизненный цикл worker'а
+- Неблокирующий select (default) и его последствия
