@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_3
+Next task: jun6_4
 
 ## Completed
 
@@ -408,6 +408,14 @@ Next task: jun6_3
   - blocking on full buffer
   - producer-consumer basics
 
+- [x] jun6_3 Channel Direction
+  - send-only channel
+  - receive-only channel
+  - channel direction
+  - range over channel
+  - channel ownership
+  - producer closes channel
+
 ## Topics learned
 
 - rune vs byte
@@ -719,3 +727,9 @@ Next task: jun6_3
 - Buffered Send Semantics
 - Producer / Consumer Basics
 - Buffer Full Blocking
+- chan<- T
+- <-chan T
+- Направленные каналы
+- Владение каналом (Channel Ownership)
+- range по каналу
+- Завершение чтения после close
