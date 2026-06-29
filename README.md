@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_7
+Next task: jun6_8
 
 ## Completed
 
@@ -437,6 +437,13 @@ Next task: jun6_7
   - buffered channel
   - busy waiting basics
 
+- [x] jun6_7 Closing Channels
+  - close(channel)
+  - channel ownership
+  - range over channel
+  - graceful stream completion
+  - reading until channel close
+
 ## Topics learned
 
 - rune vs byte
@@ -768,3 +775,9 @@ Next task: jun6_7
 - Busy waiting
 - Когда default уместен, а когда вреден
 - Отличие блокирующего и неблокирующего ожидания
+- close(channel)
+- Channel Ownership
+- Завершение потока данных
+- range по каналу
+- Чтение до закрытия канала
+- Поведение чтения после close
