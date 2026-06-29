@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_6
+Next task: jun6_7
 
 ## Completed
 
@@ -430,6 +430,13 @@ Next task: jun6_6
   - avoiding blocked goroutines
   - worker lifecycle
 
+- [x] jun6_6 Select with Default
+  - non-blocking select
+  - default case
+  - try receive
+  - buffered channel
+  - busy waiting basics
+
 ## Topics learned
 
 - rune vs byte
@@ -756,3 +763,8 @@ Next task: jun6_6
 - Использование context.Context для завершения goroutine
 - Жизненный цикл worker'а
 - Неблокирующий select (default) и его последствия
+- Неблокирующий select
+- default в select
+- Busy waiting
+- Когда default уместен, а когда вреден
+- Отличие блокирующего и неблокирующего ожидания
