@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_9
+Next task: jun6_10
 
 ## Completed
 
@@ -451,6 +451,14 @@ Next task: jun6_9
   - manual receive loop
   - graceful stream termination
 
+- [x] jun6_9 Channel Ownership
+  - producer / consumer separation
+  - coordinator pattern
+  - channel ownership
+  - sync.WaitGroup.Go
+  - safe channel closing
+  - multiple producers
+
 ## Topics learned
 
 - rune vs byte
@@ -793,3 +801,9 @@ Next task: jun6_9
 - Zero value vs закрытый канал
 - Ручной цикл чтения канала
 - Семантика чтения после close
+- Channel Ownership
+- Coordinator Pattern
+- Multiple Producers
+- Safe Channel Closing
+- Responsibility Separation
+- WaitGroup.Go coordination
