@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_8
+Next task: jun6_9
 
 ## Completed
 
@@ -444,6 +444,13 @@ Next task: jun6_8
   - graceful stream completion
   - reading until channel close
 
+- [x] jun6_8 Comma-OK Receive
+  - v, ok := <-ch
+  - zero value vs closed channel
+  - channel receive semantics
+  - manual receive loop
+  - graceful stream termination
+
 ## Topics learned
 
 - rune vs byte
@@ -781,3 +788,8 @@ Next task: jun6_8
 - range по каналу
 - Чтение до закрытия канала
 - Поведение чтения после close
+- Двухзначное получение из канала
+- ok как индикатор состояния канала
+- Zero value vs закрытый канал
+- Ручной цикл чтения канала
+- Семантика чтения после close
