@@ -459,6 +459,15 @@ Next task: jun6_10
   - safe channel closing
   - multiple producers
 
+- [x] jun6_10 Fan-In Basics
+  - fan-in pattern
+  - merge multiple channels
+  - variadic channels
+  - WaitGroup.Go
+  - channel ownership
+  - safe merged channel closing
+  - Go 1.22+ range loop variable semantics
+
 ## Topics learned
 
 - rune vs byte
@@ -807,3 +816,8 @@ Next task: jun6_10
 - Safe Channel Closing
 - Responsibility Separation
 - WaitGroup.Go coordination
+- Fan-In
+- Merge Pattern
+- Variadic Channels
+- Go 1.22+ range semantics
+- Concurrent Channel Merging
