@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_10
+Next task: jun6_12
 
 ## Completed
 
@@ -468,6 +468,14 @@ Next task: jun6_10
   - safe merged channel closing
   - Go 1.22+ range loop variable semantics
 
+- [x] jun6_11 Fan-Out Basics
+  - fan-out pattern
+  - multiple workers
+  - shared jobs channel
+  - producer ownership
+  - worker lifecycle
+  - runtime work distribution
+
 ## Topics learned
 
 - rune vs byte
@@ -821,3 +829,8 @@ Next task: jun6_10
 - Variadic Channels
 - Go 1.22+ range semantics
 - Concurrent Channel Merging
+- Fan-Out pattern
+- Multiple workers consuming from one channel
+- Runtime work distribution
+- Worker lifecycle
+- Producer ownership of a channel
