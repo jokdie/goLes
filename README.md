@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_12
+Next task: jun6_13
 
 ## Completed
 
@@ -476,6 +476,13 @@ Next task: jun6_12
   - worker lifecycle
   - runtime work distribution
 
+- [x] jun6_12 Pipeline Basics
+  - pipeline pattern
+  - stage composition
+  - channel chaining
+  - stage ownership
+  - independent processing stages
+
 ## Topics learned
 
 - rune vs byte
@@ -834,3 +841,9 @@ Next task: jun6_12
 - Runtime work distribution
 - Worker lifecycle
 - Producer ownership of a channel
+- Pipeline pattern
+- Stage composition
+- Independent processing stages
+- Channel chaining
+- Stage ownership
+- Sequential concurrent processing
