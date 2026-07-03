@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_13
+Next task: jun6_14
 
 ## Completed
 
@@ -483,6 +483,15 @@ Next task: jun6_13
   - stage ownership
   - independent processing stages
 
+- [x] jun6_13 Worker Pool Basics
+  - worker pool
+  - fixed worker count
+  - shared jobs channel
+  - results channel
+  - coordinator pattern
+  - WaitGroup synchronization
+  - safe results channel closing
+
 ## Topics learned
 
 - rune vs byte
@@ -847,3 +856,9 @@ Next task: jun6_13
 - Channel chaining
 - Stage ownership
 - Sequential concurrent processing
+- Worker Pool
+- Fixed Worker Count
+- Shared Jobs Queue
+- Coordinator Pattern
+- Worker Lifecycle
+- Automatic Work Distribution by Go Runtime
