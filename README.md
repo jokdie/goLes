@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_14
+Next task: jun6_15
 
 ## Completed
 
@@ -492,6 +492,15 @@ Next task: jun6_14
   - WaitGroup synchronization
   - safe results channel closing
 
+- [x] jun6_14 Semaphore Basics
+  - semaphore pattern
+  - buffered channel as semaphore
+  - limiting concurrent operations
+  - permit acquisition and release
+  - concurrency control
+  - goroutine lifecycle
+  - defer for resource release
+
 ## Topics learned
 
 - rune vs byte
@@ -862,3 +871,12 @@ Next task: jun6_14
 - Coordinator Pattern
 - Worker Lifecycle
 - Automatic Work Distribution by Go Runtime
+- Semaphore Pattern
+- Buffered Channel as Semaphore
+- Concurrency Limiting
+- Permit Acquisition / Release
+- Resource Ownership
+- Limiting concurrent operations
+- defer for resource release
+- Отличие Worker Pool и Semaphore
+- Semaphore как ограничение доступа к ресурсу
