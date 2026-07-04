@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_16
+Next task: jun6_17
 
 Weak Areas:
 -
@@ -124,6 +124,15 @@ Weak Areas:
   - goroutine leak prevention
   - channel ownership
 
+- [x] jun6_16 Timeout Pattern
+  - time.After
+  - timeout pattern
+  - concurrent result waiting
+  - goroutine lifecycle
+  - timeout vs work cancellation
+  - buffered result channel
+  - goroutine leak after timeout
+
 ## Topics learned
 
 - Отличие "состояния" от "события"
@@ -212,3 +221,10 @@ Weak Areas:
 - Cooperative goroutine shutdown
 - Goroutine leak prevention
 - Lifecycle coordination
+- Timeout Pattern
+- time.After
+- Waiting for result or timeout
+- Timeout does not stop goroutines
+- Buffered result channel
+- Goroutine leak after timeout
+- Difference between timeout and cancellation
