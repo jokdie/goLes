@@ -1,0 +1,894 @@
+# Go Learning Roadmap
+
+## Completed
+
+- [x] jun0_1 CountVowels
+  - strings
+  - rune
+  - loops
+
+- [x] jun0_2 IsPalindrome
+  - strings
+  - rune
+  - indices
+
+- [x] jun0_3 FirstUniqueChar
+  - map[rune]int
+  - frequency counting
+  - unicode
+
+- [x] jun0_4 RemoveDuplicates
+  - slice
+  - append
+  - map as set
+
+- [x] jun0_5 MostFrequentChar
+  - map
+  - frequency counting
+  - first winner logic
+
+- [x] jun0_6 RotateRight
+  - modulo
+  - slices
+  - indexing
+  - edge cases
+
+- [x] jun0_7 RemoveAt
+  - removing elements from slice
+  - backing array
+  - slice copying
+  - off-by-one
+
+- [x] jun0_8 ReverseWords
+  - strings.Fields
+  - strings.Join
+  - reverse slice
+  - string immutability
+
+- [x] jun0_9 Counter
+  - struct
+  - methods
+  - value receiver
+  - pointer receiver
+  - struct copy
+  - pointer semantics
+
+- [x] jun0_10 Swap
+  - pointers
+  - dereference
+  - address operator
+  - nil pointers
+  - multiple assignment
+
+- [x] jun1_1 Divide
+  - error
+  - errors.New
+  - multiple return values
+  - error handling
+
+- [x] jun1_2 Custom Validation Error
+  - custom errors
+  - error interface
+  - implicit interface implementation
+  - method sets
+
+- [x] jun1_3 Interfaces and Polymorphism
+  - interfaces
+  - polymorphism
+  - implicit interface implementation
+  - interface values
+
+- [x] jun1_4 Interface Nil Trap
+  - nil interface
+  - interface value
+  - pointer nil
+  - interface comparison
+
+- [x] jun1_5 Pointer Receiver Interface
+  - method set
+  - pointer receiver
+  - interface implementation
+
+- [x] jun1_6 Interfaces + Polymorphism (Shape)
+  - Interface implementation
+  - Method Set basics
+  - Polymorphism in Go
+  - Struct vs interface behavior
+
+- [x] jun1_7 User Repository
+  - custom errors
+  - interfaces
+  - interface values
+  - repository pattern basics
+  - map lookup
+
+- [x] jun1_8 Notification Service
+  - composition
+  - dependency injection basics
+  - interfaces as dependencies
+  - custom errors
+
+- [x] jun1_9 Logger Embedding
+  - embedding
+  - method promotion
+  - composition vs embedding
+  - shadowing
+
+- [x] jun1_10 Auditor Embedding
+  - embedding
+  - method promotion
+  - shadowing
+  - method resolution
+
+- [x] jun2_1 Packages and Visibility
+  - packages
+  - imports
+  - exported identifiers
+  - unexported identifiers
+  - constructors
+
+- [x] jun2_2 Package API Design
+  - encapsulation
+  - exported methods
+  - unexported fields
+  - package api
+
+- [x] jun2_3 Config Constructor Validation
+  - constructors
+  - validation
+  - package boundaries
+  - custom errors
+
+- [x] jun2_4 Modules and Package Imports
+  - go.mod
+  - module path
+  - package imports
+  - package organization
+
+- [x] jun2_5 Sentinel Errors
+  - errors.New
+  - sentinel errors
+  - package variables
+  - error comparison
+
+- [x] jun2_6 Error Wrapping and errors.Is
+  - error wrapping
+  - fmt.Errorf
+  - %w
+  - errors.Is
+
+- [x] jun2_7 errors.As and Custom Errors
+  - errors.As
+  - custom error types
+  - validation errors
+  - type assertions via errors.As
+
+- [x] jun2_8 Error Polymorphism
+  - errors.As
+  - interface polymorphism
+  - custom error types
+  - error dispatching
+
+- [x] jun2_9 Dependency Injection Basics
+  - dependency injection
+  - service layer basics
+  - constructor injection
+  - interface dependencies
+
+- [x] jun3_1 Composition vs Embedding
+  - composition
+  - embedding
+  - method promotion
+  - shadowing
+
+- [x] jun3_2 JSON Basics
+  - encoding/json
+  - json.Marshal
+  - json.Unmarshal
+  - struct tags
+
+- [x] jun3_3 JSON Response Design
+  - nested JSON
+  - API responses
+  - response DTO
+  - json tags
+
+- [x] jun3_4 First HTTP Server
+  - net/http
+  - http.HandlerFunc
+  - ResponseWriter
+  - Request
+  - HTTP methods
+
+- [x] jun3_5 HTTP JSON Endpoint
+  - json.NewEncoder
+  - Content-Type
+  - HTTP Response
+  - ServeMux
+  - JSON API basics
+
+- [x] jun3_6 POST JSON Endpoint
+  - POST method
+  - Request Body
+  - json.NewDecoder
+  - json.NewEncoder
+  - HTTP status codes
+  - Bad Request handling
+
+- [x] jun3_7 User Validation API
+  - HTTP POST
+  - JSON Decoder
+  - Validation Layer
+  - Error Response
+  - HTTP Status Codes
+
+- [x] jun3_8 Query Parameters API
+  - Query Parameters
+  - URL Values
+  - GET Endpoint
+  - JSON Response Helper
+
+- [x] jun3_9 Path Parameters API
+  - Path Parameters
+  - Request Routing
+  - strconv.Atoi
+  - URL Parameter Validation
+  - Service Layer
+  - Repository Layer
+  - Dependency Injection
+  - HTTP 400 vs 404 vs 500
+  - ServeMux Route Patterns
+
+- [x] jun3_10 User Create API
+  - HTTP POST
+  - DTO
+  - Validation
+  - Layered Architecture
+  - Dependency Injection
+  - In-Memory Repository
+  - HTTP 201 Created
+  - Error Response Pattern
+
+- [x] jun3_10 HTTP Middleware Basics
+  - Middleware
+  - Middleware Chain
+  - Request ID
+  - Logging Middleware
+  - ResponseWriter Wrapping
+  - Request Lifecycle
+  - Cross-Cutting Concerns
+
+- [x] jun4_1 Context Basics
+  - context.Context
+  - context.WithValue
+  - Request Context
+  - Context propagation
+  - Request ID
+  - Custom Context Key
+
+- [x] jun4_2 Context Cancellation
+  - ctx.Done()
+  - context.Canceled
+  - HTTP request cancellation
+  - Context propagation
+  - Select with Context
+
+- [x] jun4_3 Context Timeout
+  - context.WithTimeout
+  - context.DeadlineExceeded
+  - defer cancel
+  - timeout propagation
+  - HTTP timeout handling
+
+- [x] jun4_4 Context Values
+  - context.WithValue
+  - Context keys
+  - custom context key type
+  - request-scoped data
+  - middleware context propagation
+
+- [x] jun4_5 Context Propagation
+  - context propagation
+  - layered architecture
+  - request-scoped data
+  - middleware context injection
+  - handler -> service -> repository
+  - context value extraction
+
+- [x] jun4_6 Context Cancellation Propagation
+  - context cancellation
+  - ctx.Done()
+  - context.Canceled
+  - select with context
+  - cancellation propagation
+  - handler -> service -> repository cancellation flow
+
+- [x] jun4_7 Deadline vs Cancellation
+  - context.WithCancel
+  - context.WithTimeout
+  - context.Canceled
+  - context.DeadlineExceeded
+  - timeout propagation
+  - cancellation propagation
+  - ctx.Err()
+
+- [x] jun5_1 First Goroutine
+  - goroutine
+  - go keyword
+  - sync.WaitGroup
+  - wg.Add
+  - wg.Done
+  - wg.Wait
+  - goroutine lifecycle
+  - synchronization basics
+
+- [x] jun5_2 Multiple Goroutines
+  - multiple goroutines
+  - sync.WaitGroup
+  - WaitGroup.Go
+  - concurrent execution
+  - goroutine group synchronization
+  - WaitGroup lifecycle
+
+- [x] jun5_3 Closure Capture
+  - anonymous goroutines
+  - closure
+  - variable capture
+  - goroutines in loops
+  - WaitGroup synchronization
+  - range variable semantics (Go 1.22+)
+
+- [x] jun5_4 Race Condition Demo
+  - race condition
+  - shared memory
+  - concurrent writes
+  - counter++
+  - WaitGroup vs synchronization
+  - data races
+
+- [x] jun5_5 Race Detector
+  - go run -race
+  - CGO
+  - data race detection
+  - race reports
+  - read/write conflicts
+  - concurrent memory access
+
+- [x] jun5_6 Mutex Counter
+  - sync.Mutex
+  - mutual exclusion
+  - critical section
+  - thread-safe counter
+  - race condition prevention
+
+- [x] jun5_7 RWMutex UserStore
+  - sync.RWMutex
+  - RLock / RUnlock
+  - Lock / Unlock
+  - concurrent map protection
+  - reader/writer synchronization
+
+- [x] jun5_8 Mutex vs RWMutex Counter
+  - sync.Mutex
+  - sync.RWMutex
+  - interface implementation
+  - reader/writer locking
+  - interchangeable implementations
+
+- [x] jun5_9 Config Loader
+  - sync.Once
+  - lazy initialization
+  - thread-safe singleton initialization
+  - encapsulation
+  - loader pattern
+
+- [x] jun5_10 Condition Variable Basics
+  - sync.Cond
+  - sync.NewCond
+  - Wait
+  - Signal
+  - condition variables
+  - waiting for state changes
+
+- [x] jun6_1 First Channel
+  - unbuffered channel
+  - chan
+  - send operation
+  - receive operation
+  - goroutine synchronization
+  - blocking semantics
+
+- [x] jun6_2 Buffered Channels
+  - buffered channel
+  - channel capacity
+  - send without immediate receiver
+  - blocking on full buffer
+  - producer-consumer basics
+
+- [x] jun6_3 Channel Direction
+  - send-only channel
+  - receive-only channel
+  - channel direction
+  - range over channel
+  - channel ownership
+  - producer closes channel
+
+- [x] jun6_4 Select Basics
+  - select
+  - waiting on multiple channels
+  - scheduler interaction
+  - non-deterministic channel selection
+  - single receive with select
+
+- [x] jun6_5 Goroutine Leak
+  - goroutine leak
+  - select with send operation
+  - context cancellation
+  - avoiding blocked goroutines
+  - worker lifecycle
+
+- [x] jun6_6 Select with Default
+  - non-blocking select
+  - default case
+  - try receive
+  - buffered channel
+  - busy waiting basics
+
+- [x] jun6_7 Closing Channels
+  - close(channel)
+  - channel ownership
+  - range over channel
+  - graceful stream completion
+  - reading until channel close
+
+- [x] jun6_8 Comma-OK Receive
+  - v, ok := <-ch
+  - zero value vs closed channel
+  - channel receive semantics
+  - manual receive loop
+  - graceful stream termination
+
+- [x] jun6_9 Channel Ownership
+  - producer / consumer separation
+  - coordinator pattern
+  - channel ownership
+  - sync.WaitGroup.Go
+  - safe channel closing
+  - multiple producers
+
+- [x] jun6_10 Fan-In Basics
+  - fan-in pattern
+  - merge multiple channels
+  - variadic channels
+  - WaitGroup.Go
+  - channel ownership
+  - safe merged channel closing
+  - Go 1.22+ range loop variable semantics
+
+- [x] jun6_11 Fan-Out Basics
+  - fan-out pattern
+  - multiple workers
+  - shared jobs channel
+  - producer ownership
+  - worker lifecycle
+  - runtime work distribution
+
+- [x] jun6_12 Pipeline Basics
+  - pipeline pattern
+  - stage composition
+  - channel chaining
+  - stage ownership
+  - independent processing stages
+
+- [x] jun6_13 Worker Pool Basics
+  - worker pool
+  - fixed worker count
+  - shared jobs channel
+  - results channel
+  - coordinator pattern
+  - WaitGroup synchronization
+  - safe results channel closing
+
+- [x] jun6_14 Semaphore Basics
+  - semaphore pattern
+  - buffered channel as semaphore
+  - limiting concurrent operations
+  - permit acquisition and release
+  - concurrency control
+  - goroutine lifecycle
+  - defer for resource release
+
+- [x] jun6_15 Select Cancellation Pattern
+  - context cancellation
+  - select with send
+  - producer lifecycle
+  - consumer lifecycle
+  - goroutine leak prevention
+  - channel ownership
+
+## Topics learned
+
+- rune vs byte
+- UTF-8
+- len(string)
+- len([]rune)
+- nil map
+- nil slice
+- append
+- backing array
+- slice header
+- len vs cap
+- map lookup
+- comma-ok idiom
+- removing elements from slice
+- backing array sharing
+- append side effects
+- off-by-one errors
+- strings.Fields
+- strings.Join
+- string immutability
+- string vs []byte
+- string vs []rune
+- Structs
+- Methods
+- Value Receiver
+- Pointer Receiver
+- Struct Copy Semantics
+- Pointer Semantics
+- Pointers
+- Address Operator (&)
+- Dereference Operator (*)
+- Nil Pointers
+- Multiple Assignment
+- error interface
+- errors.New
+- explicit error handling
+- Custom Errors
+- Implicit Interface Implementation
+- Method Sets
+- Error Interface
+- Interfaces
+- Polymorphism
+- Interface Values
+- Nil Interface
+- Interface Comparison
+- Interface Internal Representation
+- Method Set
+- Pointer Receiver
+- Interface Implementation Rules
+- Interfaces (polymorphism)
+- Interface method dispatch
+- Struct method implementation rules
+- Repository Pattern Basics
+- Custom Error Types
+- Error Interface Implementation
+- Interface Dynamic Type
+- Interface Dynamic Value
+- Composition
+- Dependency Injection Basics
+- Interfaces as Dependencies
+- Service Composition
+- Embedding
+- Method Promotion
+- Shadowing
+- Composition vs Embedding
+- Method Resolution
+- Embedded Method Access
+- Shadowing vs Override
+- Packages
+- Imports
+- Exported Identifiers
+- Unexported Identifiers
+- Package Visibility Rules
+- Constructors (New pattern)
+- Encapsulation
+- Information Hiding
+- Package API Design
+- Exported Methods
+- Unexported Fields
+- Getter Pattern in Go
+- Constructor Validation
+- Package Boundaries
+- Encapsulated Config Objects
+- Validation Errors
+- Go Modules
+- Module Path
+- Package Imports
+- Package Organization
+- Multi-Package Projects
+- Sentinel Errors
+- Package-Level Variables
+- Error Identity
+- Error Comparison
+- Error Wrapping
+- errors.Is
+- Wrapped Errors
+- Error Chains
+- fmt.Errorf %w
+- errors.As
+- Custom Error Types
+- Validation Errors
+- Error Type Extraction
+- Error Polymorphism
+- Error Type Dispatching
+- Multiple Error Types
+- errors.As Deep Dive
+- Dependency Injection
+- Constructor Injection
+- Service Layer Basics
+- Dependency Inversion Basics
+- Composition
+- Embedding
+- Method Promotion
+- Shadowing
+- Composition vs Embedding
+- JSON
+- encoding/json
+- json.Marshal
+- json.Unmarshal
+- Struct Tags
+- Reflection Basics
+- DTO
+- Response Model
+- API Contract
+- json.NewEncoder
+- json:"-"
+- API Response Design
+- net/http
+- http.Handler
+- http.HandlerFunc
+- http.ResponseWriter
+- http.Request
+- HTTP Methods
+- ListenAndServe
+- HTTP Status Codes
+- json.NewEncoder
+- HTTP JSON Response
+- Content-Type
+- ServeMux
+- JSON API
+- Header.Set vs Header.Add
+- Request Body
+- io.ReadCloser
+- json.NewDecoder
+- HTTP POST
+- HTTP request lifecycle
+- Request Body can be read only once
+- HTTP POST
+- JSON Decoder
+- Validation Layer
+- HTTP Status Codes
+- Error Response Pattern
+- Separation of Concerns
+- Query Parameters
+- URL Query
+- url.Values
+- Query().Get()
+- RawQuery
+- JSON Response Helper
+- Path Parameters
+- Request Path Variables
+- r.PathValue()
+- strconv.Atoi
+- URL Parameter Validation
+- Route Parameters
+- ServeMux Pattern Routing
+- Layered Architecture Basics
+- Handler -> Service -> Repository
+- Dependency Injection Through Layers
+- HTTP 400 Bad Request
+- HTTP 404 Not Found
+- HTTP 500 Internal Server Error
+- Error Mapping
+- DTO
+- Request DTO
+- Create Endpoint
+- In-Memory Repository
+- HTTP 201 Created
+- Service Layer Validation Flow
+- Entity Creation Flow
+- Middleware
+- Middleware Chaining
+- Cross-Cutting Concerns
+- Request ID Pattern
+- Logging Middleware
+- ResponseWriter Wrapping
+- Decorator Pattern
+- HTTP Request Lifecycle
+- WriteHeader Semantics
+- Automatic Status Code 200
+- context.Context
+- Request Context
+- context.WithValue
+- Context Propagation
+- Context Values
+- Custom Context Keys
+- Request ID Pattern
+- Context Cancellation
+- ctx.Done()
+- context.Canceled
+- Context-aware operations
+- Select with Context
+- HTTP Client Disconnect Handling
+- context.WithTimeout
+- context.DeadlineExceeded
+- Timeout Context
+- Context Timer Lifecycle
+- defer cancel Pattern
+- HTTP Request Timeout Handling
+- context.WithValue
+- Context Value Propagation
+- Context Key Types
+- Custom Context Keys
+- Request-Scoped Data
+- Context Helper Pattern
+- Safe Type Assertions
+- Context Propagation
+- Context Through Layers
+- Middleware Context Injection
+- Request Scoped Data Flow
+- Handler → Service → Repository Context Chain
+- Context Cancellation Propagation
+- Context Error Handling
+- context.Canceled
+- Select With Context
+- Cooperative Cancellation
+- Deadline vs Cancellation
+- context.DeadlineExceeded
+- Context timeout handling
+- Context error differentiation
+- Timeout propagation
+- Goroutine
+- go keyword
+- Concurrent execution
+- sync.WaitGroup
+- Goroutine synchronization
+- Goroutine lifecycle
+- Main goroutine vs worker goroutine
+- Deterministic completion
+- Multiple Goroutines
+- Concurrent Execution
+- WaitGroup Group Synchronization
+- WaitGroup.Go
+- WaitGroup Lifecycle
+- Concurrent Task Coordination
+- Closure
+- Variable Capture
+- Anonymous Goroutines
+- Goroutines Inside Loops
+- Range Variable Semantics
+- Closure Safety in Modern Go
+- Race Condition
+- Shared Memory
+- Concurrent Writes
+- Data Race
+- Lost Update Problem
+- WaitGroup vs Memory Safety
+- Race Detector
+- go run -race
+- CGO requirement
+- Read/Write Race
+- Memory Access Tracking
+- Race Report Analysis
+- sync.Mutex
+- Mutual Exclusion
+- Critical Section
+- Thread-Safe Data
+- Thread-Safe Counter
+- Shared Memory Synchronization
+- Lock / Unlock Pattern
+- Mutex Zero Value
+- Exclusive Access
+- Race Condition Prevention with Mutex
+- sync.RWMutex
+- Reader Lock
+- Writer Lock
+- Multiple Readers
+- Exclusive Writer
+- Thread-safe Repository
+- Concurrent Map Protection
+- Mutex vs RWMutex
+- Interface-based design
+- Interchangeable implementations
+- Read-heavy vs Write-heavy workloads
+- Choosing synchronization primitives
+- sync.Once
+- Lazy Initialization
+- One-Time Initialization
+- Loader Pattern
+- Encapsulation of synchronization primitives
+- Singleton initialization (без использования глобального состояния)
+- sync.Cond
+- sync.NewCond
+- Wait()
+- Signal()
+- Condition Variable
+- Waiting for State Changes
+- Wait() releases and re-acquires the mutex
+- Проверка условия в цикле (for, а не if)
+- Отличие "состояния" от "события"
+- Unbuffered Channels
+- Channel Send (<-)
+- Channel Receive (<-)
+- Blocking Semantics
+- Goroutine Synchronization Through Channels
+- Buffered Channels
+- Channel Capacity
+- Buffered Send Semantics
+- Producer / Consumer Basics
+- Buffer Full Blocking
+- chan<- T
+- <-chan T
+- Направленные каналы
+- Владение каналом (Channel Ownership)
+- range по каналу
+- Завершение чтения после close
+- select
+- Ожидание нескольких каналов
+- Недетерминированный выбор готового case
+- Взаимодействие select с планировщиком Go Runtime
+- Goroutine leak
+- Отправка в select
+- Использование context.Context для завершения goroutine
+- Жизненный цикл worker'а
+- Неблокирующий select (default) и его последствия
+- Неблокирующий select
+- default в select
+- Busy waiting
+- Когда default уместен, а когда вреден
+- Отличие блокирующего и неблокирующего ожидания
+- close(channel)
+- Channel Ownership
+- Завершение потока данных
+- range по каналу
+- Чтение до закрытия канала
+- Поведение чтения после close
+- Двухзначное получение из канала
+- ok как индикатор состояния канала
+- Zero value vs закрытый канал
+- Ручной цикл чтения канала
+- Семантика чтения после close
+- Channel Ownership
+- Coordinator Pattern
+- Multiple Producers
+- Safe Channel Closing
+- Responsibility Separation
+- WaitGroup.Go coordination
+- Fan-In
+- Merge Pattern
+- Variadic Channels
+- Go 1.22+ range semantics
+- Concurrent Channel Merging
+- Fan-Out pattern
+- Multiple workers consuming from one channel
+- Runtime work distribution
+- Worker lifecycle
+- Producer ownership of a channel
+- Pipeline pattern
+- Stage composition
+- Independent processing stages
+- Channel chaining
+- Stage ownership
+- Sequential concurrent processing
+- Worker Pool
+- Fixed Worker Count
+- Shared Jobs Queue
+- Coordinator Pattern
+- Worker Lifecycle
+- Automatic Work Distribution by Go Runtime
+- Semaphore Pattern
+- Buffered Channel as Semaphore
+- Concurrency Limiting
+- Permit Acquisition / Release
+- Resource Ownership
+- Limiting concurrent operations
+- defer for resource release
+- Отличие Worker Pool и Semaphore
+- Semaphore как ограничение доступа к ресурсу
+- Select Cancellation Pattern
+- Context-aware producer
+- Context-aware consumer
+- Blocking send cancellation
+- Cooperative goroutine shutdown
+- Goroutine leak prevention
+- Lifecycle coordination
