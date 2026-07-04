@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_17
+Next task: jun6_18
 
 Weak Areas:
 -
@@ -133,6 +133,15 @@ Weak Areas:
   - buffered result channel
   - goroutine leak after timeout
 
+- [x] jun6_17 Timer Pattern
+  - time.NewTimer
+  - timer lifecycle
+  - timer.Stop
+  - managed timeout
+  - difference from time.After
+  - buffered result channel
+  - goroutine leak prevention
+
 ## Topics learned
 
 - Отличие "состояния" от "события"
@@ -228,3 +237,9 @@ Weak Areas:
 - Buffered result channel
 - Goroutine leak after timeout
 - Difference between timeout and cancellation
+- time.NewTimer
+- Управляемый жизненный цикл таймера
+- timer.Stop
+- Отличие time.After и time.NewTimer
+- Буферизированный канал результата
+- Связь буферизации с предотвращением утечек goroutine
