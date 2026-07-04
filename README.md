@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_18
+Next task: jun6_19
 
 Weak Areas:
 -
@@ -142,6 +142,15 @@ Weak Areas:
   - buffered result channel
   - goroutine leak prevention
 
+- [x] jun6_18 Ticker Pattern
+  - time.NewTicker
+  - periodic events
+  - ticker lifecycle
+  - ticker.Stop
+  - context-aware ticker loop
+  - graceful goroutine shutdown
+  - difference between Timer and Ticker
+
 ## Topics learned
 
 - Отличие "состояния" от "события"
@@ -243,3 +252,12 @@ Weak Areas:
 - Отличие time.After и time.NewTimer
 - Буферизированный канал результата
 - Связь буферизации с предотвращением утечек goroutine
+- Ticker Pattern
+- time.NewTicker
+- Periodic event generation
+- Ticker lifecycle
+- ticker.Stop
+- Difference between Timer and Ticker
+- Runtime timer reuse
+- Context-aware periodic workers
+- Graceful shutdown of ticker-based goroutines
