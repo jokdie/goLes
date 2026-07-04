@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_15
+Next task: jun6_16
 
 ## Completed
 
@@ -501,6 +501,14 @@ Next task: jun6_15
   - goroutine lifecycle
   - defer for resource release
 
+- [x] jun6_15 Select Cancellation Pattern
+  - context cancellation
+  - select with send
+  - producer lifecycle
+  - consumer lifecycle
+  - goroutine leak prevention
+  - channel ownership
+
 ## Topics learned
 
 - rune vs byte
@@ -880,3 +888,10 @@ Next task: jun6_15
 - defer for resource release
 - Отличие Worker Pool и Semaphore
 - Semaphore как ограничение доступа к ресурсу
+- Select Cancellation Pattern
+- Context-aware producer
+- Context-aware consumer
+- Blocking send cancellation
+- Cooperative goroutine shutdown
+- Goroutine leak prevention
+- Lifecycle coordination
