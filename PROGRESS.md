@@ -390,6 +390,7 @@
   - condition variables
   - waiting for state changes
 
+
 - [x] jun6_1 First Channel
   - unbuffered channel
   - chan
@@ -505,6 +506,49 @@
   - consumer lifecycle
   - goroutine leak prevention
   - channel ownership
+
+- [x] jun6_16 Timeout Pattern
+  - time.After
+  - timeout pattern
+  - concurrent result waiting
+  - goroutine lifecycle
+  - timeout vs work cancellation
+  - buffered result channel
+  - goroutine leak after timeout
+
+- [x] jun6_17 Timer Pattern
+  - time.NewTimer
+  - timer lifecycle
+  - timer.Stop
+  - managed timeout
+  - difference from time.After
+  - buffered result channel
+  - goroutine leak prevention
+
+- [x] jun6_18 Ticker Pattern
+  - time.NewTicker
+  - periodic events
+  - ticker lifecycle
+  - ticker.Stop
+  - context-aware ticker loop
+  - graceful goroutine shutdown
+  - difference between Timer and Ticker
+
+- [x] jun6_19 Multiple Tickers Coordination
+  - multiple background workers
+  - shared context cancellation
+  - independent ticker ownership
+  - worker lifecycle
+  - coordinated shutdown
+  - WaitGroup.Go synchronization
+
+- [x] jun6_20 Ticker Drift
+  - ticker drift
+  - slow consumer
+  - dropped ticks
+  - ticker channel semantics
+  - timer runtime behavior
+  - defer ticker.Stop
 
 ## Topics learned
 
@@ -892,3 +936,37 @@
 - Cooperative goroutine shutdown
 - Goroutine leak prevention
 - Lifecycle coordination
+- Timeout Pattern
+- time.After
+- Waiting for result or timeout
+- Timeout does not stop goroutines
+- Buffered result channel
+- Goroutine leak after timeout
+- Difference between timeout and cancellation
+- time.NewTimer
+- Управляемый жизненный цикл таймера
+- timer.Stop
+- Отличие time.After и time.NewTimer
+- Буферизированный канал результата
+- Связь буферизации с предотвращением утечек goroutine
+- Ticker Pattern
+- time.NewTicker
+- Periodic event generation
+- Ticker lifecycle
+- ticker.Stop
+- Difference between Timer and Ticker
+- Runtime timer reuse
+- Context-aware periodic workers
+- Graceful shutdown of ticker-based goroutines
+- Multiple periodic workers
+- Shared context cancellation
+- Independent ticker ownership
+- Worker lifecycle management
+- Coordinated goroutine shutdown
+- Resource ownership
+- Ticker drift
+- Slow consumer behavior
+- Dropped ticks
+- Difference between periodic signal and event queue
+- Why Ticker.C is not closed by Stop
+- Runtime trade-offs for ticker delivery
