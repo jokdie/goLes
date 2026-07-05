@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_20
+Next task: jun6_21
 
 Weak Areas:
 -
@@ -159,6 +159,14 @@ Weak Areas:
   - coordinated shutdown
   - WaitGroup.Go synchronization
 
+- [x] jun6_20 Ticker Drift
+  - ticker drift
+  - slow consumer
+  - dropped ticks
+  - ticker channel semantics
+  - timer runtime behavior
+  - defer ticker.Stop
+
 ## Topics learned
 
 - Отличие "состояния" от "события"
@@ -275,3 +283,9 @@ Weak Areas:
 - Worker lifecycle management
 - Coordinated goroutine shutdown
 - Resource ownership
+- Ticker drift
+- Slow consumer behavior
+- Dropped ticks
+- Difference between periodic signal and event queue
+- Why Ticker.C is not closed by Stop
+- Runtime trade-offs for ticker delivery
