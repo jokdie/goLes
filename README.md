@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
-Current level: Junior 6
-Next task: jun6_21
+Current level: Middle 1
+Next task: mid1_1
 
 Weak Areas:
 -
