@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Junior 6
-Next task: jun6_19
+Next task: jun6_20
 
 Weak Areas:
 -
@@ -151,6 +151,14 @@ Weak Areas:
   - graceful goroutine shutdown
   - difference between Timer and Ticker
 
+- [x] jun6_19 Multiple Tickers Coordination
+  - multiple background workers
+  - shared context cancellation
+  - independent ticker ownership
+  - worker lifecycle
+  - coordinated shutdown
+  - WaitGroup.Go synchronization
+
 ## Topics learned
 
 - Отличие "состояния" от "события"
@@ -261,3 +269,9 @@ Weak Areas:
 - Runtime timer reuse
 - Context-aware periodic workers
 - Graceful shutdown of ticker-based goroutines
+- Multiple periodic workers
+- Shared context cancellation
+- Independent ticker ownership
+- Worker lifecycle management
+- Coordinated goroutine shutdown
+- Resource ownership
