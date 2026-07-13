@@ -13,7 +13,8 @@ func NewRouter(h *Handler) http.Handler {
 
 	var handler http.Handler = mux
 
-	handler = middleware.RequestIDMiddleware(mux)
+	handler = middleware.ApplicationJsonMiddleware(mux)
+	handler = middleware.RequestIDMiddleware(handler)
 
 	return handler
 }

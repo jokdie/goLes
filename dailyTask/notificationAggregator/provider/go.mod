@@ -2,7 +2,10 @@ module provider
 
 go 1.26.4
 
-require github.com/go-playground/validator/v10 v10.30.3
+require (
+	github.com/go-playground/validator/v10 v10.30.3
+	github.com/google/uuid v1.6.0
+)
 
 require (
 	github.com/gabriel-vasile/mimetype v1.4.13 // indirect

@@ -3,8 +3,10 @@ package handler
 import (
 	"context"
 	"encoding/json"
-	"log"
+	"errors"
+	"io"
 	"net/http"
+	"provider/internal/http/response"
 	"provider/internal/model"
 
 	"github.com/go-playground/validator/v10"
@@ -63,40 +65,54 @@ func NewHandler(
 	}
 }
 
-func writeJSON(w http.ResponseWriter, status int, data any) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(status)
-	if err := json.NewEncoder(w).Encode(data); err != nil {
-		log.Printf("Ошибка записи json: %s", err)
-	}
-}
-
-func respondBadRequest(w http.ResponseWriter, err error) {
-	log.Println(err.Error())
-
-	errCode := http.StatusBadRequest
-	writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Некорректный JSON"})
-}
-
-func respondInternal(w http.ResponseWriter, err error) {
-	log.Println(err.Error())
-
-	errCode := http.StatusInternalServerError
-	writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Internal server error"})
-}
-
+// @todo удалить все writeJSON из метода decodeRequest
 func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderRequest, error) {
-	defer r.Body.Close()
 	var req model.ProviderRequest
 
+	const maxBodySize = 1 << 20 // 1 MB
+
+	r.Body = http.MaxBytesReader(w, r.Body, maxBodySize)
+
+	decoder := json.NewDecoder(r.Body)
+	decoder.DisallowUnknownFields()
+
+	if err := decoder.Decode(&req); err != nil {
+		var maxBytesErr *http.MaxBytesError
+
+		switch {
+		case errors.As(err, &maxBytesErr):
+			errCode := http.StatusRequestEntityTooLarge
+
+			response.WriteJSON(w, errCode, model.ErrorResponse{
+				Code:    errCode,
+				Message: "Request body too large",
+			})
+
+		default:
+			errCode := http.StatusBadRequest
+
+			response.WriteJSON(w, errCode, model.ErrorResponse{
+				Code:    errCode,
+				Message: "Некорректный JSON",
+			})
+		}
+
+		return model.ProviderRequest{}, err
+	}
+
+	if decoder.Decode(&struct{}{}) != io.EOF {
+		errCode := http.StatusBadRequest
+
+		response.WriteJSON(w, errCode, model.ErrorResponse{
+			Code:    errCode,
+			Message: "Разрешен только один объект JSON",
+		})
+
+		return model.ProviderRequest{}, errors.New("request body must contain only one JSON object")
+	}
+
+	return req, nil
 	// @todo list
-	// 1) сделать кейс r.Body = http.MaxBytesReader чтобы не слали 1гб, например ограничение 1мб
-	// 2) json.NewDecoder(r.Body).Decode(&req) передеалть на decoder.DisallowUnknownFields()
-	// 3) добавить проверку в целом везде на "application/json"
-	// 4) в requestId добавить
-	// if requestID == "" {
-	// 	requestID = uuid.NewString()
-	// }
 	// 5) все логи переделать на "slog"
 	// 6) все errors.New лучше переделать на var ErrProviderUnavailable = errors.New(...) +errors.Is(...)
 	// 7) добавить конфиг env и туда 8080 пихнуть
@@ -120,15 +136,4 @@ func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderReques
 	//    repository/
 	//    model/
 	//    errors/
-
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		log.Printf("decodeRequest error: %v", err)
-
-		errCode := http.StatusBadRequest
-		writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Некорректный JSON"})
-
-		return model.ProviderRequest{}, err
-	}
-
-	return req, nil
 }

@@ -6,10 +6,8 @@ type requestIDKey struct{}
 
 var Key = requestIDKey{}
 
-func GetRequestID(ctx context.Context) string {
-	if requestId, ok := ctx.Value(Key).(string); ok {
-		return requestId
-	}
+func Get(ctx context.Context) string {
+	id, _ := ctx.Value(Key).(string)
 
-	return ""
+	return id
 }

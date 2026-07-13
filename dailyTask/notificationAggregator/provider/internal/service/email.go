@@ -19,7 +19,7 @@ func NewEmailService() *EmailService {
 func (s *EmailService) SendEmail(ctx context.Context, req model.ProviderRequest) error {
 	log.Printf(
 		"[EmailService] лог для тестирования.\n[X-GUID]: %v\n[User]: %d\n[Message]: %s\n",
-		requestid.GetRequestID(ctx),
+		requestid.Get(ctx),
 		req.UserID,
 		req.Message,
 	)

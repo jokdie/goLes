@@ -23,7 +23,7 @@ func (p *Provider) Send(
 
 	log.Printf(
 		"[Email] request=%s user=%d",
-		requestid.GetRequestID(ctx),
+		requestid.Get(ctx),
 		req.UserID,
 	)
 
