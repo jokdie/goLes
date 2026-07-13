@@ -1,38 +1,33 @@
 package handler
 
 import (
-	"encoding/json"
-	"log"
+	"fmt"
 	"net/http"
-	"provider/internal/model"
 )
 
 func (h *Handler) email(w http.ResponseWriter, r *http.Request) {
-	var req model.ProviderRequest
+	req, err := decodeRequest(w, r)
+	defer r.Body.Close()
 
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		log.Printf("Decode ProviderRequest error: %v", err)
-
-		errCode := http.StatusBadRequest
-		writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Некорректный JSON"})
+	if err != nil {
+		err = fmt.Errorf("decode ProviderRequest error: %v", err)
+		respondBadRequest(w, err)
 
 		return
 	}
 
 	if err := h.validate.Struct(req); err != nil {
-		log.Printf("Validate ProviderRequest error: %v", err)
-
-		errCode := http.StatusBadRequest
-		writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Некорректный JSON"})
+		err = fmt.Errorf("validate ProviderRequest error: %v", err)
+		respondBadRequest(w, err)
 
 		return
 	}
 
 	if err := h.emailService.SendEmail(r.Context(), req); err != nil {
-		log.Printf("SendEmail error: %v", err)
+		err = fmt.Errorf("SendEmail error: %v", err)
+		respondInternal(w, err)
 
-		errCode := http.StatusInternalServerError
-		writeJSON(w, errCode, model.ErrorResponse{Code: errCode, Message: "Internal server error"})
+		return
 	}
 
 	w.WriteHeader(http.StatusNoContent)
