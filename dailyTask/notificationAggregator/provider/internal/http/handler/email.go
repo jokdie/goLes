@@ -1,31 +1,27 @@
 package handler
 
 import (
-	"fmt"
 	"net/http"
 	"provider/internal/http/response"
 )
 
 func (h *Handler) email(w http.ResponseWriter, r *http.Request) {
-	req, err := decodeRequest(w, r)
+	req, err := h.decodeRequest(w, r)
 
 	if err != nil {
-		err = fmt.Errorf("decode ProviderRequest error: %v", err)
-		response.BadRequest(w, err)
+		response.BadRequest(h.logger, w)
 
 		return
 	}
 
 	if err := h.validate.Struct(req); err != nil {
-		err = fmt.Errorf("validate ProviderRequest error: %v", err)
-		response.BadRequest(w, err)
+		response.BadRequest(h.logger, w)
 
 		return
 	}
 
 	if err := h.emailService.SendEmail(r.Context(), req); err != nil {
-		err = fmt.Errorf("SendEmail error: %v", err)
-		response.Internal(w, err)
+		response.Internal(h.logger, w)
 
 		return
 	}

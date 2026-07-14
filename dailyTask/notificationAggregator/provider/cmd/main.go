@@ -2,7 +2,8 @@ package main
 
 import (
 	"context"
-	"log"
+	"log/slog"
+	"os"
 	"os/signal"
 	"provider/internal/app"
 	"syscall"
@@ -12,8 +13,10 @@ func main() {
 	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer stop()
 
-	application := app.New()
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+
+	application := app.New(logger)
 	if err := application.Run(ctx); err != nil {
-		log.Fatal("Ошибка сервера: ", err)
+		logger.Error("application exited", slog.Any("error", err))
 	}
 }

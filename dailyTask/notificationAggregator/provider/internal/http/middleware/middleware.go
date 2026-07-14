@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 	"encoding/json"
-	"log"
+	"log/slog"
 	"mime"
 	"net/http"
 	"provider/internal/model"
@@ -28,22 +28,27 @@ func RequestIDMiddleware(next http.Handler) http.Handler {
 	})
 }
 
-func ApplicationJsonMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		mediaType, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
-		if err != nil || mediaType != "application/json" {
-			errCode := http.StatusUnsupportedMediaType
+func ApplicationJsonMiddleware(logger *slog.Logger) func(http.Handler) http.Handler {
+	return func(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			mediaType, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
+			if err != nil || mediaType != "application/json" {
+				errCode := http.StatusUnsupportedMediaType
 
-			w.Header().Set("Content-Type", "application/json")
-			w.WriteHeader(errCode)
+				w.Header().Set("Content-Type", "application/json")
+				w.WriteHeader(errCode)
 
-			data := model.ErrorResponse{Code: errCode, Message: "Unsupported Media Type"}
-			if err := json.NewEncoder(w).Encode(data); err != nil {
-				log.Printf("Ошибка записи json: %s", err)
+				data := model.ErrorResponse{Code: errCode, Message: "Unsupported Media Type"}
+				if err := json.NewEncoder(w).Encode(data); err != nil {
+					logger.Error(
+						"failed to write json response",
+						slog.Any("error", err),
+					)
+				}
+				return
 			}
-			return
-		}
 
-		next.ServeHTTP(w, r)
-	})
+			next.ServeHTTP(w, r)
+		})
+	}
 }

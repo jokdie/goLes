@@ -1,11 +1,12 @@
 package handler
 
 import (
+	"log/slog"
 	"net/http"
 	"provider/internal/http/middleware"
 )
 
-func NewRouter(h *Handler) http.Handler {
+func NewRouter(logger *slog.Logger, h *Handler) http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /provider/email", h.email)
 	mux.HandleFunc("POST /provider/sms", func(w http.ResponseWriter, r *http.Request) {})
@@ -13,7 +14,7 @@ func NewRouter(h *Handler) http.Handler {
 
 	var handler http.Handler = mux
 
-	handler = middleware.ApplicationJsonMiddleware(mux)
+	handler = middleware.ApplicationJsonMiddleware(logger)(handler)
 	handler = middleware.RequestIDMiddleware(handler)
 
 	return handler

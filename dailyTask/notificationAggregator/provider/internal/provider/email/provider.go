@@ -3,28 +3,30 @@ package email
 import (
 	"context"
 	"errors"
-	"log"
+	"log/slog"
 	"math/rand"
 	"provider/internal/model"
 	"provider/internal/requestid"
 	"time"
 )
 
-type Provider struct{}
+type Provider struct {
+	logger *slog.Logger
+}
 
-func New() *Provider {
-	return &Provider{}
+func New(logger *slog.Logger) *Provider {
+	return &Provider{logger}
 }
 
 func (p *Provider) Send(
 	ctx context.Context,
 	req model.ProviderRequest,
 ) error {
-
-	log.Printf(
-		"[Email] request=%s user=%d",
-		requestid.Get(ctx),
-		req.UserID,
+	p.logger.Info(
+		"[Email] request.",
+		slog.String("X-GUID", requestid.Get(ctx)),
+		slog.Int("User", req.UserID),
+		slog.String("Message", req.Message),
 	)
 
 	select {

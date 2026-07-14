@@ -3,25 +3,27 @@ package service
 import (
 	"context"
 	"errors"
-	"log"
+	"log/slog"
 	"math/rand"
 	"provider/internal/model"
 	"provider/internal/requestid"
 	"time"
 )
 
-type EmailService struct{}
+type EmailService struct {
+	logger *slog.Logger
+}
 
-func NewEmailService() *EmailService {
-	return &EmailService{}
+func NewEmailService(logger *slog.Logger) *EmailService {
+	return &EmailService{logger}
 }
 
 func (s *EmailService) SendEmail(ctx context.Context, req model.ProviderRequest) error {
-	log.Printf(
-		"[EmailService] лог для тестирования.\n[X-GUID]: %v\n[User]: %d\n[Message]: %s\n",
-		requestid.Get(ctx),
-		req.UserID,
-		req.Message,
+	s.logger.Info(
+		"[EmailService] лог для тестирования.",
+		slog.String("X-GUID", requestid.Get(ctx)),
+		slog.Int("User", req.UserID),
+		slog.String("Message", req.Message),
 	)
 
 	select {

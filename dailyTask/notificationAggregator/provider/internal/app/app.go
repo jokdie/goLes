@@ -3,7 +3,7 @@ package app
 import (
 	"context"
 	"errors"
-	"log"
+	"log/slog"
 	"net/http"
 	"provider/internal/http/handler"
 	"provider/internal/server"
@@ -14,18 +14,25 @@ import (
 )
 
 type App struct {
-	srv *http.Server
+	srv    *http.Server
+	logger *slog.Logger
 }
 
-func New() *App {
+func New(logger *slog.Logger) *App {
 	validate := validator.New()
-	emailService := service.NewEmailService()
-	handlerApp := handler.NewHandler(validate, emailService)
-	routerApp := handler.NewRouter(handlerApp)
+
+	serviceLogger := logger.With(slog.String("layer", "service"))
+	emailService := service.NewEmailService(serviceLogger)
+
+	handlerLogger := logger.With(slog.String("layer", "handler"))
+	handlerApp := handler.NewHandler(validate, handlerLogger, emailService)
+	routerApp := handler.NewRouter(handlerLogger, handlerApp)
+
 	serverApp := server.NewServer(routerApp)
 
 	return &App{
-		srv: serverApp,
+		srv:    serverApp,
+		logger: logger,
 	}
 }
 
@@ -38,11 +45,14 @@ func (app *App) Run(ctx context.Context) error {
 		}
 	}()
 
-	log.Println("Сервер запущен на :8080")
+	app.logger.Info(
+		"server started",
+		slog.String("addr", app.srv.Addr),
+	)
 
 	select {
 	case <-ctx.Done():
-		log.Println("Получен сигнал завершения")
+		app.logger.Info("shutdown signal received")
 
 		return app.shutdown(context.Background())
 
@@ -56,12 +66,17 @@ func (app *App) shutdown(ctx context.Context) error {
 	defer cancel()
 
 	if err := app.srv.Shutdown(shutdownCtx); err != nil {
+		app.logger.Error(
+			"shutdown failed",
+			slog.Any("error", err),
+		)
+
 		return err
 	}
 
 	// Здесь также закрываем соединения с БД и фоновые задачи (например, db.Close())
 
-	log.Println("Сервер успешно остановлен")
+	app.logger.Info("server stopped")
 
 	return nil
 }

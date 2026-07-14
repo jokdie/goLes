@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
+	"log/slog"
 	"net/http"
 	"provider/internal/http/response"
 	"provider/internal/model"
@@ -49,11 +50,13 @@ type EmailService interface {
 
 type Handler struct {
 	validate     *validator.Validate
+	logger       *slog.Logger
 	emailService EmailService
 }
 
 func NewHandler(
 	validate *validator.Validate,
+	logger *slog.Logger,
 	emailService EmailService,
 	// email provider.Provider,
 	// sms   provider.Provider,
@@ -61,12 +64,13 @@ func NewHandler(
 ) *Handler {
 	return &Handler{
 		validate:     validate,
+		logger:       logger,
 		emailService: emailService,
 	}
 }
 
-// @todo удалить все writeJSON из метода decodeRequest
-func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderRequest, error) {
+// @todo удалить все writeJSON из метода decodeRequest тк слишком много ответственностей внутри одного метода
+func (h *Handler) decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderRequest, error) {
 	var req model.ProviderRequest
 
 	const maxBodySize = 1 << 20 // 1 MB
@@ -83,7 +87,7 @@ func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderReques
 		case errors.As(err, &maxBytesErr):
 			errCode := http.StatusRequestEntityTooLarge
 
-			response.WriteJSON(w, errCode, model.ErrorResponse{
+			response.WriteJSON(h.logger, w, errCode, model.ErrorResponse{
 				Code:    errCode,
 				Message: "Request body too large",
 			})
@@ -91,7 +95,7 @@ func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderReques
 		default:
 			errCode := http.StatusBadRequest
 
-			response.WriteJSON(w, errCode, model.ErrorResponse{
+			response.WriteJSON(h.logger, w, errCode, model.ErrorResponse{
 				Code:    errCode,
 				Message: "Некорректный JSON",
 			})
@@ -103,7 +107,7 @@ func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderReques
 	if decoder.Decode(&struct{}{}) != io.EOF {
 		errCode := http.StatusBadRequest
 
-		response.WriteJSON(w, errCode, model.ErrorResponse{
+		response.WriteJSON(h.logger, w, errCode, model.ErrorResponse{
 			Code:    errCode,
 			Message: "Разрешен только один объект JSON",
 		})
@@ -113,7 +117,6 @@ func decodeRequest(w http.ResponseWriter, r *http.Request) (model.ProviderReques
 
 	return req, nil
 	// @todo list
-	// 5) все логи переделать на "slog"
 	// 6) все errors.New лучше переделать на var ErrProviderUnavailable = errors.New(...) +errors.Is(...)
 	// 7) добавить конфиг env и туда 8080 пихнуть
 	// 8) добавить серверу таймауты ReadTimeout + WriteTimeout + IdleTimeout + ReadHeaderTimeout
