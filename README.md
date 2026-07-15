@@ -1,10 +1,13 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_4
+Next task: mid1_5
 
 Weak Areas:
--
+- Scheduler state transitions
+- Asynchronous Preemption
+- Mutex internals
+- Memory Model
 
 ## Completed
 
@@ -31,6 +34,19 @@ Weak Areas:
   - cooperative cancellation
   - responsibility separation
 
+- [x] mid1_4 Go Runtime Overview
+  - Scheduler (M:P:G)
+  - Goroutine lifecycle
+  - Parking / Unparking
+  - Work Stealing
+  - GOMAXPROCS
+  - WaitGroup internals
+  - sync.Once internals
+  - Mutex internals (overview)
+  - Channel internals (overview)
+  - select internals (overview)
+  - Runtime mental model
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -49,3 +65,19 @@ Weak Areas:
 - Group orchestration
 - Responsibility separation
 - Encapsulation of concurrency primitives
+- Scheduler (M:P:G)
+- Goroutine lifecycle
+- G / M / P responsibilities
+- GOMAXPROCS
+- Local vs Global Run Queue
+- Work Stealing
+- Parking / Unparking goroutines
+- Asynchronous Preemption
+- WaitGroup internals
+- sync.Once internals
+- Mutex internals (overview)
+- Channel internals (overview)
+- select internals (overview)
+- Memory Model (overview)
+- Escape Analysis (overview)
+- Garbage Collector (overview)
