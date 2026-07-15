@@ -1,12 +1,11 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_6
+Next task: mid1_7
 
 Weak Areas:
 - Scheduler state transitions
 - Asynchronous Preemption
-- Mutex internals
 - Memory Model
 - Atomic vs Memory Model
 
@@ -56,6 +55,15 @@ Weak Areas:
   - CPU atomic instructions (conceptually)
   - Lost Update problem
 
+- [x] mid1_6 Mutex Internals
+  - Fast Path
+  - Slow Path
+  - CAS
+  - Spinning
+  - Parking / Unparking
+  - Mutex lifecycle
+  - Scheduler interaction
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -97,3 +105,9 @@ Weak Areas:
 - Lock-Free counters
 - Atomic vs Mutex
 - CPU atomic instructions (conceptually)
+- CMutex Fast Path
+- CMutex Slow Path
+- CCAS (Compare-And-Swap)
+- CActive Spinning
+- CMutex lifecycle
+- CScheduler interaction with Mutex
