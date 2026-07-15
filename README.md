@@ -1,13 +1,12 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_7
+Next task: mid1_8
 
 Weak Areas:
 - Scheduler state transitions
 - Asynchronous Preemption
-- Memory Model
-- Atomic vs Memory Model
+- Atomic publication patterns
 
 ## Completed
 
@@ -64,6 +63,16 @@ Weak Areas:
   - Mutex lifecycle
   - Scheduler interaction
 
+- [x] mid1_7 Go Memory Model
+  - Happens-Before
+  - Memory Visibility
+  - Publication of writes
+  - Synchronization primitives
+  - WaitGroup memory guarantees
+  - Mutex memory guarantees
+  - Channel memory guarantees
+  - Why Sleep is not synchronization
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -111,3 +120,9 @@ Weak Areas:
 - CActive Spinning
 - CMutex lifecycle
 - CScheduler interaction with Mutex
+- Go Memory Model
+- Happens-Before
+- Memory Visibility
+- Publication of Writes
+- Synchronization Guarantees
+- Why time.Sleep is not synchronization
