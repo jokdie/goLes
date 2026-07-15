@@ -1,13 +1,14 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_5
+Next task: mid1_6
 
 Weak Areas:
 - Scheduler state transitions
 - Asynchronous Preemption
 - Mutex internals
 - Memory Model
+- Atomic vs Memory Model
 
 ## Completed
 
@@ -47,6 +48,14 @@ Weak Areas:
   - select internals (overview)
   - Runtime mental model
 
+- [x] mid1_5 sync/atomic Fundamentals
+  - atomic.Int32
+  - Add / Load
+  - Atomic vs Mutex
+  - Lock-Free counters
+  - CPU atomic instructions (conceptually)
+  - Lost Update problem
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -81,3 +90,10 @@ Weak Areas:
 - Memory Model (overview)
 - Escape Analysis (overview)
 - Garbage Collector (overview)
+- sync/atomic
+- atomic.Int32
+- Atomic operations
+- Lost Update problem
+- Lock-Free counters
+- Atomic vs Mutex
+- CPU atomic instructions (conceptually)
