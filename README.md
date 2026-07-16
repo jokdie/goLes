@@ -1,7 +1,7 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_8
+Next task: mid1_9
 
 Weak Areas:
 - Scheduler state transitions
@@ -73,6 +73,14 @@ Weak Areas:
   - Channel memory guarantees
   - Why Sleep is not synchronization
 
+- [x] mid1_8 Atomic Publication Patterns
+  - atomic.Pointer[T]
+  - Safe publication
+  - Immutable snapshot
+  - Lock-free reads
+  - Publication pattern
+  - Atomic pointer replacement
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -126,3 +134,9 @@ Weak Areas:
 - Publication of Writes
 - Synchronization Guarantees
 - Why time.Sleep is not synchronization
+- Atomic Publication Pattern
+- atomic.Pointer[T]
+- Safe Publication
+- Immutable Snapshot
+- Lock-Free Read Path
+- Atomic Pointer Replacement
