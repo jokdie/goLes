@@ -1,12 +1,10 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_9
+Next task: mid1_10
 
 Weak Areas:
-- Scheduler state transitions
 - Asynchronous Preemption
-- Atomic publication patterns
 
 ## Completed
 
@@ -81,6 +79,17 @@ Weak Areas:
   - Publication pattern
   - Atomic pointer replacement
 
+- [x] mid1_9 Scheduler State Transitions
+  - Runnable
+  - Running
+  - Waiting
+  - Dead
+  - Park / Unpark (концептуально)
+  - Scheduler state transitions
+  - Mutex waiting lifecycle
+  - Channel waiting lifecycle
+  - Timer waiting lifecycle
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -140,3 +149,13 @@ Weak Areas:
 - Immutable Snapshot
 - Lock-Free Read Path
 - Atomic Pointer Replacement
+- Goroutine State Machine
+- Runnable
+- Running
+- Waiting
+- Dead
+- Park / Unpark
+- Scheduler State Transitions
+- Waiting mechanisms
+- Ready queue
+- Runtime wake-up model
