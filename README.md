@@ -1,10 +1,10 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_10
+Next task: mid1_16 — Worker Pool
 
 Weak Areas:
-- Asynchronous Preemption
+  - Go Memory Model (атомарные операции и memory ordering)
 
 ## Completed
 
@@ -22,7 +22,6 @@ Weak Areas:
   - why bool is insufficient
   - motivation for synchronization primitives
 
-  
 - [x] mid1_3 Manual Errgroup
   - custom Group abstraction
   - sync.Once
@@ -89,6 +88,55 @@ Weak Areas:
   - Mutex waiting lifecycle
   - Channel waiting lifecycle
   - Timer waiting lifecycle
+
+- [x] mid1_10 Asynchronous Preemption
+  - cooperative vs asynchronous scheduling
+  - CPU-bound goroutines
+  - safe points
+  - scheduler fairness
+  - GC interaction
+  - goroutine preemption
+  - difference from OS thread preemption
+
+- [x] mid1_11 Channels Fundamentals
+  - unbuffered channels
+  - send/receive synchronization
+  - channel blocking semantics
+  - happens-before via channels
+  - channel as communication primitive
+  - park/unpark on channel operations
+
+- [x] mid1_12 Channel Ownership
+  - channel ownership
+  - single sender ownership
+  - channel lifecycle
+  - close semantics
+  - range over channel
+  - producer-consumer pattern
+
+- [x] mid1_13 Fan-In
+  - multiple producers
+  - coordinator pattern
+  - channel ownership in fan-in
+  - completion signaling
+  - chan struct{}
+  - separation of data and synchronization channels
+
+- [x] mid1_14 Fan-Out
+  - multiple workers
+  - single jobs channel
+  - work distribution
+  - one job → one worker
+  - worker lifecycle
+  - coordinator responsibility
+
+- [x] mid1_15 Pipeline
+  - pipeline fundamentals
+  - stage responsibility
+  - stage composition
+  - orchestrator pattern
+  - channel ownership across stages
+  - sequential data processing
 
 ## Topics learned
 
@@ -159,3 +207,42 @@ Weak Areas:
 - Waiting mechanisms
 - Ready queue
 - Runtime wake-up model
+- Asynchronous Preemption
+- Safe Points
+- Goroutine Preemption
+- Scheduler Fairness
+- GC and Preemption Interaction
+- Difference Between Goroutine and Thread Preemption
+- Channels Fundamentals
+- Unbuffered Channels
+- Send/Receive Synchronization
+- Happens-Before via Channels
+- Channel Blocking Semantics
+- Channel Communication Model
+- Channel Ownership
+- Ownership Rule
+- Channel Lifecycle
+- Producer–Consumer
+- close() semantics
+- range over channels
+- Fan-In
+- Coordinator Pattern
+- Completion Signaling
+- chan struct{}
+- Разделение каналов данных и каналов синхронизации
+- Владение жизненным циклом общего канала
+- Fan-Out
+- Multiple Workers
+- Work Distribution
+- Single Shared Jobs Channel
+- Worker Lifecycle
+- Runtime Distribution of Channel Receivers
+- Responsibility Separation (Producer / Worker / Coordinator)
+- Pipeline
+- Stage
+- Sequential Processing
+- Stage Responsibility
+- Pipeline Composition
+- Orchestrator Pattern
+- Runtime behavior in Pipeline
+- Channel ownership across multiple stages
