@@ -1,10 +1,11 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_16 — Worker Pool
+Next task: mid1_22 — Context Values
 
 Weak Areas:
-  - Go Memory Model (атомарные операции и memory ordering)
+  - CAS и check-then-act race
+  - panic/recover влияние panic в goroutine на процесс
 
 ## Completed
 
@@ -138,6 +139,55 @@ Weak Areas:
   - channel ownership across stages
   - sequential data processing
 
+- [x] mid1_16 Worker Pool
+  - fixed-size worker pool
+  - shared jobs channel
+  - result collection
+  - worker lifecycle
+  - orchestrator responsibility
+  - graceful worker completion
+
+- [x] mid1_17 Semaphore
+  - semaphore pattern
+  - buffered channel as semaphore
+  - limiting concurrency
+  - goroutine parking on full channel
+  - semaphore lifecycle
+  - semaphore vs worker pool
+
+- [x] mid1_18 Select
+  - select fundamentals
+  - waiting on multiple channels
+  - nil channel disabling
+  - closed channel behavior
+  - select runtime model
+  - merge pattern
+
+- [x] mid1_19 Manual Context Cancellation
+  - cooperative cancellation
+  - done channel
+  - cancellation via close(done)
+  - cancellation-aware send
+  - ownership of cancellation channel
+  - broadcast cancellation
+
+- [x] mid1_20 context.Context
+  - context.Context fundamentals
+  - context.WithCancel
+  - Context tree
+  - Context ownership
+  - Cooperative cancellation via Context
+  - Context as standard cancellation mechanism
+
+- [x] mid1_21 Context Deadlines & Timeouts
+  - context.WithTimeout
+  - context.WithDeadline
+  - DeadlineExceeded
+  - Per-operation Context
+  - Timer-based cancellation
+  - Runtime timer integration (conceptually)
+  - Early resource release via cancel()
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -246,3 +296,42 @@ Weak Areas:
 - Orchestrator Pattern
 - Runtime behavior in Pipeline
 - Channel ownership across multiple stages
+- Worker Pool
+- Fixed Worker Count
+- Shared Jobs Queue
+- Worker Lifecycle
+- Result Collection
+- Worker Coordination
+- Graceful Completion
+- Semaphore Pattern
+- Buffered Channel as Semaphore
+- Concurrency Limiting
+- Semaphore Lifecycle
+- Semaphore vs Worker Pool
+- Runtime behavior of blocked senders
+- Select
+- Multiple Channel Waiting
+- Nil Channel Pattern
+- Closed Channel Behavior
+- Select Runtime Model
+- Merge Pattern
+- Cooperative Cancellation
+- Done Channel Pattern
+- Broadcast Cancellation
+- Cancellation-aware Send
+- Cancellation-aware Receive
+- Ownership of Cancellation Signal
+- ontext.Context
+- ontext.WithCancel
+- ерево контекстов
+- ладение жизненным циклом Context
+- ереход от ручного done к стандартной библиотеке
+- ооперативная отмена через Context
+- context.WithTimeout
+- context.WithDeadline
+- DeadlineExceeded
+- Per-operation Context
+- Runtime Timer System
+- Timer-based cancellation
+- Context lifetime
+- Early resource release
