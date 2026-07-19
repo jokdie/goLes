@@ -2,72 +2,26 @@ package service
 
 import (
 	"context"
-	"sync"
+	"mid1_25_2/internal/model"
 )
 
 type Repository interface {
-	Get(ctx context.Context, id int) error
+	GetUser(parentCtx context.Context, id int) (model.User, error)
 }
 
 type UserService struct {
-	userRepr   Repository
-	orderRep   Repository
-	profileRep Repository
+	userRepr Repository
 }
 
 func NewUserService(
 	userRep Repository,
-	orderRep Repository,
-	profileRep Repository,
 ) *UserService {
 	return &UserService{
-		userRepr:   userRep,
-		orderRep:   orderRep,
-		profileRep: profileRep,
+		userRepr: userRep,
 	}
 }
 
-func (s *UserService) GetUser(parentCtx context.Context, id int) error {
-	ctx, cancel := context.WithCancel(parentCtx)
-	defer cancel()
-	wg := sync.WaitGroup{}
-	once := sync.Once{}
-	var firstError error
+func (s *UserService) GetUser(ctx context.Context, id int) (model.User, error) {
+	return s.userRepr.GetUser(ctx, id)
 
-	wg.Go(func() {
-		err := s.userRepr.Get(ctx, id)
-
-		if err != nil {
-			once.Do(func() {
-				firstError = err
-				cancel()
-			})
-		}
-	})
-
-	wg.Go(func() {
-		err := s.orderRep.Get(ctx, id)
-
-		if err != nil {
-			once.Do(func() {
-				firstError = err
-				cancel()
-			})
-		}
-	})
-
-	wg.Go(func() {
-		err := s.profileRep.Get(ctx, id)
-
-		if err != nil {
-			once.Do(func() {
-				firstError = err
-				cancel()
-			})
-		}
-	})
-
-	wg.Wait()
-
-	return firstError
 }

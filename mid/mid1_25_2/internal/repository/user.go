@@ -3,6 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
+	"mid1_25_2/internal/model"
 	"time"
 )
 
@@ -12,14 +13,14 @@ func NewUserRepository() *UserRepository {
 	return &UserRepository{}
 }
 
-func (r *UserRepository) Get(ctx context.Context, id int) error {
+func (r *UserRepository) GetUser(ctx context.Context, id int) (model.User, error) {
 	fmt.Println("start user")
 	select {
 	case <-ctx.Done():
 		fmt.Println("user cancel")
-		return ctx.Err()
-	case <-time.After(2 * time.Second):
+		return model.User{}, ctx.Err()
+	case <-time.After(1 * time.Second):
 		fmt.Println("user OK")
-		return nil
+		return model.User{ID: id}, nil
 	}
 }
