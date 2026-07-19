@@ -1,11 +1,10 @@
 # Go Learning Roadmap
 
 Current level: Middle 1
-Next task: mid1_22 — Context Values
+Next task: mid1_26 — errgroup
 
 Weak Areas:
   - CAS и check-then-act race
-  - panic/recover влияние panic в goroutine на процесс
 
 ## Completed
 
@@ -188,6 +187,43 @@ Weak Areas:
   - Runtime timer integration (conceptually)
   - Early resource release via cancel()
 
+- [x] mid1_22 Context Values
+  - context.WithValue
+  - request-scoped data
+  - custom context keys
+  - valueCtx chain
+  - Context value lookup
+  - O(n) lookup complexity
+  - safe value extraction
+  - encapsulation via helper functions
+
+- [x] mid1_23 Context Best Practices
+  - request-scoped data
+  - Context as control plane
+  - Service Locator anti-pattern
+  - Dependency Injection vs Context
+  - explicit dependencies
+  - request-scoped logger
+  - Context lifetime
+
+- [x] mid1_24 Context in Production (HTTP → Service → Repository)
+  - Context propagation across layers
+  - HTTP Handler ownership of request Context
+  - Service as transparent Context forwarder
+  - Repository cancellation awareness
+  - Error propagation without abstraction leaks
+  - Layer responsibility for HTTP error mapping
+
+- [x] mid1_25 Context in Production (Fan-Out)
+  - Fan-Out with shared Context
+  - Child Context via context.WithCancel
+  - Group-wide cancellation
+  - Manual fail-fast coordination
+  - sync.Once for first-error semantics
+  - WaitGroup synchronization
+  - Context ownership inside Service
+  - Concurrent repository execution
+
 ## Topics learned
 
 - Fail-fast pattern
@@ -335,3 +371,32 @@ Weak Areas:
 - Timer-based cancellation
 - Context lifetime
 - Early resource release
+- ontext Values
+- ontext.WithValue
+- alueCtx
+- equest-scoped data
+- ontext key best practices
+- ontext value lookup
+- ustom key types
+- afe type assertions
+- ncapsulation of Context access
+- Context Best Practices
+- Explicit Dependencies
+- Service Locator anti-pattern
+- Dependency Injection
+- Request-scoped logger
+- Context lifetime
+- Architectural responsibility of Context
+- Context propagation
+- Layer responsibility
+- Context ownership in HTTP applications
+- Error propagation across layers
+- Request cancellation in production architecture
+- Fan-Out with shared Context
+- Child Context
+- Group-wide cancellation
+- First Error Wins
+- Manual fail-fast
+- sync.Once for first error
+- Context ownership in concurrent operations
+- Service-scoped cancellation
